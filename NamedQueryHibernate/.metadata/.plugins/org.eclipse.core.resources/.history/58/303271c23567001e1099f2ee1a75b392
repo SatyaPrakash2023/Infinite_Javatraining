@@ -1,0 +1,56 @@
+package com.java.jsf;
+
+import java.util.List;
+import java.util.Map;
+
+import javax.faces.context.FacesContext;
+
+import org.hibernate.Criteria;
+import org.hibernate.Query;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.criterion.Projections;
+import org.hibernate.criterion.Restrictions;
+
+public class EmployDAOImpl implements EmployDAO {
+	Session session;
+
+	@Override
+	public List<Employ> showEmployDao() {
+		session=SessionHelper.getConnection().openSession();
+		Query query = session.getNamedQuery("showEmploy");
+		List<Employ> employList=query.list();
+		return employList;
+	}
+
+	@Override
+	public String searchEmployDao(int empno) {
+		Map<String, Object> sessionMap=FacesContext.getCurrentInstance().getExternalContext().getSessionMap();
+		session=SessionHelper.getConnection().openSession();
+		Query query=session.getNamedQuery("searchEmploy");
+		query.setParameter("empno", empno);
+		Employ employ = (Employ) query.uniqueResult();
+		sessionMap.put("employFound", employ);
+		return "SearchEmploy.jsp?faces-redirect=true";
+	}
+	
+	public String validateMe(Login login) {
+		String encr=EncryptPassWord.getCode(login.getPassCode());
+		Map<String,Object> sessionMap = 
+	FacesContext.getCurrentInstance().getExternalContext().getSessionMap();		
+		SessionFactory sf = SessionHelper.getConnection();
+		Session session = sf.openSession();
+		Criteria cr = session.createCriteria(Login.class);
+		cr.add(Restrictions.eq("userName", login.getUserName()));
+		cr.add(Restrictions.eq("passCode", encr.trim()));
+		cr.setProjection(Projections.rowCount());
+		long  count =(Long)cr.uniqueResult();
+		if (count==1) {
+			return "EmployShow.jsp?faces-redirect=true";			
+		} else {
+			sessionMap.put("errorMessage", "Invalid Credentials...");
+			return "Login.jsp?faces-redirect=true";
+		}
+	}
+
+}

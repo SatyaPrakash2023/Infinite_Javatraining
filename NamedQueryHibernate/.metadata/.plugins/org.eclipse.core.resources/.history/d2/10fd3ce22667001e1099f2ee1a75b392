@@ -1,0 +1,20 @@
+package com.java.jsf;
+
+public class EmployController {
+	private EmployDAO employDao;
+	private Employ employ;
+	public EmployDAO getEmployDao() {
+		return employDao;
+	}
+	public void setEmployDao(EmployDAO employDao) {
+		this.employDao = employDao;
+	}
+	public Employ getEmploy() {
+		return employ;
+	}
+	public void setEmploy(Employ employ) {
+		this.employ = employ;
+	}
+	
+	
+}

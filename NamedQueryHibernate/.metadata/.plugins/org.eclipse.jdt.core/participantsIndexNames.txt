@@ -1,0 +1,3 @@
+INDEX VERSION 1.132
+D:\NamedQueryHibernate\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\174438772.index
+\JsfNamedQuery\src\main\java

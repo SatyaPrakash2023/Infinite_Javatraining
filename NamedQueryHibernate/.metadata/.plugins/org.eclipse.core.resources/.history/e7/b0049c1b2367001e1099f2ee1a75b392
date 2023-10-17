@@ -1,0 +1,9 @@
+package com.java.jsf;
+
+public class Employ {
+	private int empno;
+	private String name;
+	private Gender gender;
+	private String dept;
+	
+}
