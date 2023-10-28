@@ -1,0 +1,28 @@
+package com.java.ejb;
+
+import java.util.List;
+
+import javax.ejb.LocalBean;
+import javax.ejb.Stateless;
+
+/**
+ * Session Bean implementation class CustomerBean
+ */
+@Stateless
+@LocalBean
+public class CustomerBean implements CustomerBeanRemote {
+
+    /**
+     * Default constructor. 
+     */
+    public CustomerBean() {
+        // TODO Auto-generated constructor stub
+    }
+
+	@Override
+	public List<Customer> showCustomer() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

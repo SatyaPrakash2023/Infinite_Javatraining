@@ -1,0 +1,73 @@
+package com.java.ejb;
+
+import java.util.Date;
+
+public class CustomerPolicy {
+	private int policyId;
+	private String custId;
+	private String insuranceId;
+	private int insuranceAmount;
+	private String payMode;
+	private Date registerDate;
+	public int getPolicyId() {
+		return policyId;
+	}
+	public void setPolicyId(int policyId) {
+		this.policyId = policyId;
+	}
+	public String getCustId() {
+		return custId;
+	}
+	public void setCustId(String custId) {
+		this.custId = custId;
+	}
+	public String getInsuranceId() {
+		return insuranceId;
+	}
+	public void setInsuranceId(String insuranceId) {
+		this.insuranceId = insuranceId;
+	}
+	public int getInsuranceAmount() {
+		return insuranceAmount;
+	}
+	public void setInsuranceAmount(int insuranceAmount) {
+		this.insuranceAmount = insuranceAmount;
+	}
+	public PayMode getPayMode() {
+		return payMode;
+	}
+	public void setPayMode(PayMode payMode) {
+		this.payMode = payMode;
+	}
+	public Date getRegisterDate() {
+		return registerDate;
+	}
+	public void setRegisterDate(Date registerDate) {
+		this.registerDate = registerDate;
+	}
+	public CustomerPolicy(int policyId, String custId, String insuranceId, int insuranceAmount, PayMode payMode,
+			Date registerDate) {
+		super();
+		this.policyId = policyId;
+		this.custId = custId;
+		this.insuranceId = insuranceId;
+		this.insuranceAmount = insuranceAmount;
+		this.payMode = payMode;
+		this.registerDate = registerDate;
+	}
+	public CustomerPolicy() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	@Override
+	public String toString() {
+		return "CustomerPolicy [policyId=" + policyId + ", custId=" + custId + ", insuranceId=" + insuranceId
+				+ ", insuranceAmount=" + insuranceAmount + ", payMode=" + payMode + ", registerDate=" + registerDate
+				+ "]";
+	}
+	
+	
+	
+	
+
+}

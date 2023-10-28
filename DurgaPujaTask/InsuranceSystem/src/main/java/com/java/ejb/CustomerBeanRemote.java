@@ -1,0 +1,14 @@
+package com.java.ejb;
+
+import java.util.List;
+
+import javax.ejb.Remote;
+
+@Remote
+public interface CustomerBeanRemote {
+	List<Customer>showCustomer();
+	
+	String addCustomer(Customer customer);
+	String addAuthorization(CustomerAuth custA);
+	List<Insurance>showInsurance();
+}

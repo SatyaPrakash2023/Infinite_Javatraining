@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated Oct 26, 2023, 11:45:01 AM by Hibernate Tools 3.6.2.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+    <class dynamic-insert="false" dynamic-update="false" mutable="true" name="com.java.ejb.InsurancePlans" optimistic-lock="version" polymorphism="implicit" select-before-update="false" table="INSURANCEPLANS">
+        <id name="planId" type="int">
+            <column name="PLAN_ID"/>
+            <generator class="assigned"/>
+        </id>
+        <property generated="never" lazy="false" name="planId" optimistic-lock="true" type="java.lang.String" unique="false">
+            <column name="INSURANCE_ID"/>
+        </property>
+        <property generated="never" lazy="false" name="premiumAmount" optimistic-lock="true" type="double" unique="false">
+            <column name="PREMIUMAMOUNT"/>
+        </property>
+        <property generated="never" lazy="false" name="coverageAmount" optimistic-lock="true" type="double" unique="false">
+            <column name="COVERAGEAMOUNT"/>
+        </property>
+        <property generated="never" lazy="false" name="payMode" optimistic-lock="true" type="java.lang.String" unique="false">
+            <column name="PAYMODE"/>
+        </property>
+        <property generated="never" lazy="false" name="intialAmount" optimistic-lock="true" type="double" unique="false">
+            <column name="INTIALAMOUNT"/>
+        </property>
+    </class>
+</hibernate-mapping>

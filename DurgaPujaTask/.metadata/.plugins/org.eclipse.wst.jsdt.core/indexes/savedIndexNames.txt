@@ -1,0 +1,9 @@
+INDEX VERSION 1.4+D:\DurgaPujaTask\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+4051220417.index
+2237625656.index
+1309580731.index
+2373764333.index
+2172903923.index
+1309580731.index
+3340977472.index
+937144226.index

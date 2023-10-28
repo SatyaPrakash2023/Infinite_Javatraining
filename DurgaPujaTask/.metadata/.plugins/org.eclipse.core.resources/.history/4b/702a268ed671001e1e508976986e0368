@@ -1,0 +1,16 @@
+package com.java.ejb;
+
+import java.util.Date;
+
+public class Insurance {
+	private String insuranceId;
+	private String insuranceName;
+	private String type;
+	private int premiumStart;
+	private int premiumEnd;
+	private int minPeriod;
+	private int maxPeriod;
+	private Date launchDate;
+	private String status;
+
+}

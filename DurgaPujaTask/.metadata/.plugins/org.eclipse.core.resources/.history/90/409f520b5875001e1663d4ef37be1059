@@ -1,0 +1,407 @@
+package com.java.ejb;
+
+
+import java.text.ParseException;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.List;
+import java.util.Map;
+
+import javax.faces.context.FacesContext;
+import javax.naming.NamingException;
+
+import org.hibernate.Criteria;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+import org.hibernate.criterion.ProjectionList;
+import org.hibernate.criterion.Projections;
+import org.hibernate.criterion.Restrictions;
+
+public class InsuranceSystemImpl {
+	
+	SessionFactory  sf;
+	Session session;
+	
+	public 	List<Customer>showCustomer() throws NamingException{
+		CustomerBeanRemote remote = RemoteHelper.lookupRemoteStatelessEmploy();
+		return remote.showCustomer();
+	}
+	
+	public String addCustomer(Customer customer) throws ParseException {
+		sf = SessionHelper.getConnection();
+		session = sf.openSession();
+		Transaction trans = session.beginTransaction();
+		String encr=EncryptPassword.getCode(customer.getPassCode());
+		customer.setPassCode(encr);
+		Date obj = customer.getDateOfbirth();
+//		System.out.println(obj);
+		java.sql.Date sqlDate = new java.sql.Date(obj.getTime());
+		customer.setDateOfbirth(sqlDate);
+		session.save(customer);
+		session.getTransaction().commit();
+
+		
+		int otp=GenerarteOtp.generateOtp();
+		
+		String subject = "Welcome to Life Insurance ";
+		String messageText = "Hello,\n\nThank you for signing up in our LicApp. Your otp is "+otp+"It is "
+				+ "valid for 10 minuetes only dont share your  otp with others";
+		MailSend.mailSend(customer.getEmail(), subject, messageText);
+		
+		sf = SessionHelper.getConnection();
+		session = sf.openSession();
+		Transaction trans1 = session.beginTransaction();
+		CustomerAuth cust1=new CustomerAuth();
+		cust1.setCustId(customer.getCustId());
+		cust1.setOtp(otp);
+		session.save(cust1);
+		session.getTransaction().commit();
+			
+		return"CustomerAuth.jsp?faces-redirect=true";
+	}
+	
+	public  Customer getMailId(String custId) {
+		sf = SessionHelper.getConnection();
+		session = sf.openSession();
+		Criteria cr=session.createCriteria(Customer.class);
+		cr.add(Restrictions.eq("custId", custId));
+		Customer cust=(Customer) cr.uniqueResult();	
+		return cust;
+	}
+	
+	public  CustomerAuth getOtp(String custId) {
+		sf = SessionHelper.getConnection();
+		session = sf.openSession();
+		Criteria cr=session.createCriteria(CustomerAuth.class);
+		cr.add(Restrictions.eq("custId", custId));
+		CustomerAuth custo=(CustomerAuth) cr.uniqueResult();
+		
+		return custo;
+	}
+	
+	public String addAuthorization(CustomerAuth custA) {
+		sf = SessionHelper.getConnection();
+		session = sf.openSession();
+		Transaction trans = session.beginTransaction();
+		CustomerAuth customer_Auth=getOtp(custA.getCustId());
+		Customer customera=getMailId(custA.getCustId());
+		
+		int otpTable=customer_Auth.getOtp();
+		int otp=custA.getOtp();
+		System.out.println("outside if");
+		
+		if(otpTable == otp) {
+			System.out.println("inside if");
+
+			String email=customera.getEmail();
+			String subject = "Welcome to Life Insurance ";
+			String messageText = "Hello,\n\n Your account has been successfully created.Congragulation you are now goldmember";
+					
+			MailSend.mailSend(email, subject, messageText);
+			
+			return"ResetPassWord.jsp?faces-redirect=true";
+		}else {
+			return"CustomerAuth.jsp?faces-redirect=true";
+		}
+		
+		
+		
+
+	}
+	
+	public String resetPassWord(Customer cust) {	
+		Customer custp=getMailId(cust.getCustId());
+//		String pass1=cust.getPassCode();
+//		String pass2=cust.getRetypePassCode();
+		if(cust.getPassCode().equals(cust.getRetypePassCode())) {
+			sf = SessionHelper.getConnection();
+			session = sf.openSession();
+			Transaction trans = session.beginTransaction();
+			String encr=EncryptPassword.getCode(cust.getPassCode());
+			custp.setPassCode(encr);
+			custp.setRetypePassCode(encr);
+			custp.setStatus("Active");		
+			session.update(custp);
+			session.getTransaction().commit();
+			return"LoginCustomer.jsp?faces-redirect=true";
+		 }else {
+			return"ResetPassWord.jsp?faces-redirect=true";
+		}	
+	}
+	
+	public String LoginCustomer(Customer customer) {
+		sf = SessionHelper.getConnection();
+		session = sf.openSession();
+		Map<String,Object> sessionMap = 
+			FacesContext.getCurrentInstance().getExternalContext().getSessionMap();
+		Criteria cr=session.createCriteria(Customer.class);
+		cr.add(Restrictions.eq("userName", customer.getUserName()));
+		cr.add(Restrictions.eq("passCode",EncryptPassword.getCode(customer.getPassCode())));
+		cr.setProjection(Projections.rowCount());
+		long  count =(Long)cr.uniqueResult();
+		if(count==1) {
+			sessionMap.put("userName",customer.getUserName());
+			return"Dashboard.jsp?faces-redirect=true";
+		}else{
+			return"LoginCustomer.jsp?faces-redirect=true";
+		}
+		
+
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+//	public String validateMe(Customer cust) {
+//		String encr=EncryptPassword.getCode(cust.getCUS_PASSWORD());
+//		Map<String,Object> sessionMap = 
+//	FacesContext.getCurrentInstance().getExternalContext().getSessionMap();		
+//		SessionFactory sf = SessionHelper.getConnection();
+//		Session session = sf.openSession();
+//		Criteria cr = session.createCriteria(Customer.class);
+//		cr.add(Restrictions.eq("CUS_USERNAME", cust.getCUS_USERNAME()));
+//		cr.add(Restrictions.eq("CUS_PASSWORD", cust.getCUS_PASSWORD()));
+//		cr.setProjection(Projections.rowCount());
+//		long  count =(Long)cr.uniqueResult();
+//		if (count==1) {
+//			sessionMap.put("loggedCustomer",  cust.getCUS_USERNAME());
+//			sf = SessionHelper.getConnection();
+//			session = sf.openSession();
+//			cr = session.createCriteria(Customer.class);	
+//			cr.add(Restrictions.eqOrIsNull("CUS_USERNAME", cust.getCUS_USERNAME()));
+//			Customer customerFound = (Customer) cr.uniqueResult();
+//			sessionMap.put("CUS_ID", customerFound.getCUS_ID());
+//			return "Dashboard.jsp?faces-redirect=true";			
+//		} else {
+//			sessionMap.put("errorMessage", "Invalid Credentials...");
+//			return "Login.jsp?faces-redirect=true";
+//		}
+//	}
+	
+	public List<Insurance>showInsurance(){
+		sf = SessionHelper.getConnection();
+		session = sf.openSession();
+		Criteria cr = session.createCriteria(Insurance.class);
+		List<Insurance> insuList=cr.list();
+		return insuList;
+	}
+	
+	public Insurance getInsurance(String insuranceId) {
+		sf = SessionHelper.getConnection();
+		session = sf.openSession();
+		Criteria cr = session.createCriteria(Insurance.class);
+		cr.add(Restrictions.eq("insuranceId", insuranceId));
+		Insurance inssu=(Insurance) cr.uniqueResult();
+		return inssu;
+	}
+	
+	public String getInsurancePlans(String insuranceId) {
+		sf = SessionHelper.getConnection();
+		session = sf.openSession();
+		Map<String,Object> sessionMap = 
+				FacesContext.getCurrentInstance().getExternalContext().getSessionMap();	
+		Criteria cr = session.createCriteria(InsurancePlans.class);
+		cr.add(Restrictions.eq("insId", insuranceId));
+		List<InsurancePlans>insList=cr.list();
+		sessionMap.put("insList", insList);
+
+		return"ShowInsPlans2.jsp?faces-redirect=true";		
+	}
+	
+	
+	
+	
+	public String addCustomerPolicy(CustomerPolicy policy) {
+		Insurance insFound=getInsurance(policy.getInsuranceId());
+		sf = SessionHelper.getConnection();
+		session = sf.openSession();
+		Transaction trans = session.beginTransaction();
+		String policymode=policy.getPayMode();
+		if(policymode.equals("MONTHLY")) {
+			System.out.println(policy.getPayMode());
+			double amount=policy.getInsuranceAmount();
+			double price=(amount/12);
+			policy.setInitialAmount(price);
+			session.save(policy);
+			session.getTransaction().commit();
+			return"ShowCustomerPolicy.jsp?faces-redirect=true";
+
+		}else if(policymode.equals("QUARTERLY")) {
+			System.out.println(policy.getPayMode());
+			double amount=policy.getInsuranceAmount();
+			double price=(amount/4);
+			policy.setInitialAmount(price);
+			session.save(policy);
+			session.getTransaction().commit();
+			return"ShowCustomerPolicy.jsp?faces-redirect=true";
+
+
+		}else if(policymode.equals("HALFYEARLY")) {
+			System.out.println(policy.getPayMode());
+			double amount=policy.getInsuranceAmount();
+			double price=(amount/2);
+			policy.setInitialAmount(price);
+			session.save(policy);
+			session.getTransaction().commit();
+			return"ShowCustomerPolicy.jsp?faces-redirect=true";
+
+		}else if(policymode.equals("YEARLY")) {
+			System.out.println(policy.getPayMode());
+			
+			policy.setInitialAmount(policy.getInsuranceAmount());
+			session.save(policy);
+			session.getTransaction().commit();
+			return"ShowCustomerPolicy.jsp?faces-redirect=true";
+
+		}
+		return"";
+	}
+	
+	
+	
+	
+	
+	public String getCustomerPlans(int planId) {
+		sf = SessionHelper.getConnection();
+		session = sf.openSession();
+		Map<String,Object> sessionMap = 
+				FacesContext.getCurrentInstance().getExternalContext().getSessionMap();	
+		Criteria cr = session.createCriteria(InsurancePlans.class);
+		cr.add(Restrictions.eq("planId", planId));	
+		InsurancePlans inssu=(InsurancePlans) cr.uniqueResult();
+		sessionMap.put("inssu", inssu);
+		return"Booking.jsp?faces-redirect=true";
+	}
+	
+	
+	
+//	public String takePlans(int planId) {
+//		sf = SessionHelper.getConnection();
+//		session = sf.openSession();
+//		Criteria cr = session.createCriteria(InsurancePlans.class);
+//		cr.add(Restrictions.eq("planId", planId));
+//
+//	}
+	
+	
+	public  void SendMail(String custId,Date date,String policymode) {
+		sf = SessionHelper.getConnection();
+		session = sf.openSession();
+		Criteria cr = session.createCriteria(Insurance.class);
+		cr.add(Restrictions.eq("custId", custId));
+		Customer cust=(Customer) cr.uniqueResult();
+		Date currentDate=date;
+		Calendar calender=Calendar.getInstance();
+		calender.setTime(currentDate);
+		if(policymode.equals("MONTHLY")) {
+			
+		}else if(policymode.equals("QUARTERLY")) {
+			
+		}else if(policymode.equals("HALFYEARLY")) {
+			
+		}else if(policymode.equals("YEARLY")) {
+			
+		}
+		
+		String email=cust.getEmail();
+		String subject = "Welcome to Life Insurance ";
+		String messageText = "Hello,\n\n Your Policy has been successfully Taken.Your next payment given date is"+date1;
+				
+		MailSend.mailSend(email, subject, messageText);
+		
+	}
+
+	
+	
+	public List<CustomerPolicy>showCustomerPolicy(){
+		sf = SessionHelper.getConnection();
+		session = sf.openSession();
+		Criteria cr = session.createCriteria(CustomerPolicy.class);
+		List<CustomerPolicy> policyList=cr.list();
+		return policyList;
+	}
+	
+	
+	public List<InsurancePlans>showInsPlans(){
+		sf = SessionHelper.getConnection();
+		session = sf.openSession();
+		Criteria cr = session.createCriteria(InsurancePlans.class);
+		List<InsurancePlans> planiList=cr.list();
+		return planiList;
+	}
+	
+	
+	public String addCustomerPlans(CustomerPolicy policy,InsurancePlans ins) {
+		sf = SessionHelper.getConnection();
+		session = sf.openSession();
+		Transaction trans = session.beginTransaction();
+		CustomerPolicy policyy = new CustomerPolicy();
+		double premium=ins.getPremiumAmount();
+		int planId=ins.getPlanId();
+		String insId=ins.getInsId();
+		String policymode=policy.getPayMode();
+		double installAmount=0;
+		if(policymode.equals("MONTHLY")) {
+			 installAmount=(premium/12);
+		}else if(policymode.equals("QUARTERLY")) {
+			 installAmount=(premium/4);
+		}else if(policymode.equals("HALFYEARLY")) {
+			 installAmount=(premium/2);
+		}else if(policymode.equals("YEARLY")) {
+			 installAmount=premium;
+		}
+		policyy.setCustId(policy.getCustId());
+		policyy.setInsuranceId(insId);
+		policyy.setInsuranceAmount(premium);
+		policyy.setPayMode(policymode);
+		policyy.setRegisterDate(policy.getRegisterDate());
+		policyy.setInitialAmount(installAmount);
+		policyy.setPlanId(planId);
+		session.save(policyy);
+		session.getTransaction().commit();
+		
+		SendMail(policyy.getCustId(),policyy.getRegisterDate(),policyy.getPayMode());
+		
+		return"ShowCustomerPolicy.jsp?faces-redirect=true";
+	}
+	
+
+	
+//	Pagination
+	
+	
+	public List<Insurance> getListOfInsurance(int firstRow, int rowCount) {
+		SessionFactory sf = SessionHelper.getConnection();
+		Session session = sf.openSession();
+		List<Insurance> cdList = null;
+			session.beginTransaction();
+			Criteria criteria = session.createCriteria(Insurance.class);
+			criteria.setFirstResult(firstRow);
+			criteria.setMaxResults(rowCount);
+		return criteria.list();
+	}
+	
+	public int countRows() {
+		SessionFactory sf = SessionHelper.getConnection();
+		Session session = sf.openSession();
+		try {
+			session.beginTransaction();
+			Criteria criteria = session.createCriteria(Insurance.class);
+			if (criteria != null) {
+				return criteria.list().size();
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return 0;
+	}
+
+	
+}

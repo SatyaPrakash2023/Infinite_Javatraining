@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated Oct 22, 2023, 12:00:50 PM by Hibernate Tools 3.6.2.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+    <class dynamic-insert="false" dynamic-update="false" mutable="true" name="com.java.ejb.Customer" optimistic-lock="version" polymorphism="implicit" select-before-update="false" table="CUSTOMER_DETAILS">
+        <id name="custId" type="java.lang.String">
+            <column name="CUST_ID"/>
+            <generator class="assigned"/>
+        </id>
+        <property generated="never" lazy="false" name="firstName" optimistic-lock="true" type="java.lang.String" unique="false">
+            <column name="FIRSTNAME"/>
+        </property>
+        <property generated="never" lazy="false" name="lastName" optimistic-lock="true" type="java.lang.String" unique="false">
+            <column name="LASTNAME"/>
+        </property>
+        <property generated="never" lazy="false" name="gender" optimistic-lock="true" type="java.lang.String" unique="false">
+            <column name="GENDER"/>
+        </property>
+        <property generated="never" lazy="false" name="dateOfbirth" optimistic-lock="true" type="java.util.Date" unique="false">
+            <column name="DATEOFBIRTH"/>
+        </property>
+        <property generated="never" lazy="false" name="userName" optimistic-lock="true" type="java.lang.String" unique="false">
+            <column name="USERNAME"/>
+        </property>
+        <property generated="never" lazy="false" name="passCode" optimistic-lock="true" type="java.lang.String" unique="false">
+            <column name="PASSCODE"/>
+        </property>
+        <property generated="never" lazy="false" name="status" optimistic-lock="true" type="java.lang.String" unique="false">
+            <column name="STATUS"/>
+        </property>
+        <property generated="never" lazy="false" name="retypePassCode" optimistic-lock="true" type="java.lang.String" unique="false">
+            <column name="RETYPEPASSCODE"/>
+        </property>
+        <property generated="never" lazy="false" name="email" optimistic-lock="true" type="java.lang.String" unique="false">
+            <column name="EMAIL"/>
+        </property>
+    </class>
+</hibernate-mapping>
