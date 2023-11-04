@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<faces-config xmlns="http://java.sun.com/xml/ns/javaee" 
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+              xsi:schemaLocation="http://java.sun.com/xml/ns/javaee /WEB-INF/schema/web-facesconfig_2_0.xsd" 
+              version="2.0" metadata-complete="false">
+    <!-- This file must be present with our jar, even if it is empty.  Otherwise, our Java annotations won't get scanned! -->
+<managed-bean>
+	<managed-bean-name>proAuth</managed-bean-name>
+   <managed-bean-class>com.java.jsf.ProviderAuth</managed-bean-class>
+   <managed-bean-scope>request</managed-bean-scope>
+</managed-bean>
+<managed-bean>
+	<managed-bean-name>proAuthImpl</managed-bean-name>
+   <managed-bean-class>com.java.jsf.ProviderAuthDaoImpl</managed-bean-class>
+   <managed-bean-scope>request</managed-bean-scope>
+</managed-bean>
+
+
+<managed-bean>
+<managed-bean-name>Controller</managed-bean-name>
+<managed-bean-class>com.java.jsf.PassWordController</managed-bean-class>
+<managed-bean-scope>request</managed-bean-scope>
+<managed-property>
+<property-name>proAuth</property-name>
+<property-class>com.java.jsf.ProviderAuth</property-class>
+<value>#{proAuth}</value>
+</managed-property>
+<managed-property>
+<property-name>proAuthImpl</property-name>
+<property-class>com.java.jsf.ProviderAuthDaoImpl</property-class>
+<value>#{proAuthImpl}</value>
+</managed-property>
+</managed-bean>
+
+
+<managed-bean>
+	<managed-bean-name>pharmaAuth</managed-bean-name>
+   <managed-bean-class>com.java.jsf.PharmacyAuth</managed-bean-class>
+   <managed-bean-scope>request</managed-bean-scope>
+</managed-bean>
+<managed-bean>
+	<managed-bean-name>pharmaAuthImpl</managed-bean-name>
+   <managed-bean-class>com.java.jsf.PharmacyDaoImpl</managed-bean-class>
+   <managed-bean-scope>request</managed-bean-scope>
+</managed-bean>
+
+<managed-bean>
+<managed-bean-name>PharmaController</managed-bean-name>
+<managed-bean-class>com.java.jsf.PharmacyController</managed-bean-class>
+<managed-bean-scope>request</managed-bean-scope>
+<managed-property>
+<property-name>pharmaAuth</property-name>
+<property-class>com.java.jsf.PharmacyAuth</property-class>
+<value>#{pharmaAuth}</value>
+</managed-property>
+<managed-property>
+<property-name>pharmaAuthImpl</property-name>
+<property-class>com.java.jsf.PharmacyDaoImpl</property-class>
+<value>#{pharmaAuthImpl}</value>
+</managed-property>
+</managed-bean>
+
+
+</faces-config>

@@ -1,0 +1,44 @@
+package com.java.jsf;
+
+import org.hibernate.Criteria;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+import org.hibernate.criterion.Restrictions;
+
+public class PharmacyDaoImpl {
+	SessionFactory  sf;
+	Session session;
+	
+	
+	
+	public  PharmacyAuth getPharmadetails(String providerId) {
+		sf = SessionHelper.getConnection();
+		session = sf.openSession();
+		Criteria cr=session.createCriteria(PharmacyAuth.class);
+		cr.add(Restrictions.eq("providerId", providerId));
+		PharmacyAuth pharma=(PharmacyAuth) cr.uniqueResult();	
+		return pharma;
+	}
+	
+	public String resetPassWord(PharmacyAuth pharmacyAuth) {	
+		PharmacyAuth pharma=getPharmadetails(pharmacyAuth.getPharmaId());
+		String pass1=pharmacyAuth.getPassWord();
+		String pass2=EncryptPassword.getCode(pharmacyAuth.getPassWord());
+		if(pharmacyAuth.getPassWord().equals(pharmacyAuth.getResetPasword())&&(!(pass1.contentEquals(pass2)))){
+			sf = SessionHelper.getConnection();
+			session = sf.openSession();
+			Transaction trans = session.beginTransaction();
+			String encr=EncryptPassword.getCode(provider.getPassword());
+			provide.setPassword(encr);
+			provide.setStatus("Active");
+			provide.setOtp("");
+			session.update(provide);
+			session.getTransaction().commit();
+			return"LoginProvider.jsp?faces-redirect=true";
+		 }else {
+			return"ResetPassWord.jsp?faces-redirect=true";
+		}	
+	}
+
+}
