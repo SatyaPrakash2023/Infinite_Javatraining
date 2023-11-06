@@ -1,0 +1,42 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html">
+
+	<h:form>
+		<h:selectOneMenu value="#{agentDao.localCode}" onchange="submit()"
+		valueChangeListener="#{agentDao.AgentLocalCodeChanged}">
+		<f:selectItems value="#{agentDao.getGender1()}" />
+	</h:selectOneMenu>
+	<h:outputLabel value="Gender is "/>
+	<h:outputText value="#{agentDao.localCode}"></h:outputText><br />
+	<h:dataTable value="#{agentDao.getAgentByGender()}" var="agent" border="3">
+		
+		<h:column>
+			<f:facet name="header">AgentId</f:facet>
+			<h:outputText value="#{agent.agentId}"></h:outputText>
+		</h:column>
+		<h:column>
+			<f:facet name="header">Agent Name</f:facet>
+			<h:outputText value="#{agent.name}"></h:outputText>
+		</h:column>
+		<h:column>
+			<f:facet name="header">Agent City</f:facet>
+			<h:outputText value="#{agent.city}"></h:outputText>
+		</h:column>
+		<h:column>
+			<f:facet name="header">Gender</f:facet>
+			<h:outputText value="#{agent.gender}"></h:outputText>
+		</h:column>
+		<h:column>
+			<f:facet name="header">MaritialStatus</f:facet>
+			<h:outputText value="#{agent.maritalStatus}"></h:outputText>
+		</h:column>
+		<h:column>
+			<f:facet name="header">Premium</f:facet>
+			<h:outputText value="#{agent.premium}"></h:outputText>
+		</h:column>
+	</h:dataTable>
+	</h:form>
+</html>
