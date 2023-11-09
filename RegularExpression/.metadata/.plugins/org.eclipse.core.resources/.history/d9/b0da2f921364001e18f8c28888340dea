@@ -1,0 +1,25 @@
+package com.java.reg;
+
+import java.util.regex.Pattern;
+
+public class RegEx1 {
+	public static void main(String[]args) {
+		System.out.println(Pattern.matches(".h", "ch"));
+		System.out.println(Pattern.matches("..f..i..", "infinite"));
+		System.out.println(Pattern.matches("[aeiou]", "a"));
+		System.out.println(Pattern.matches("[aeiou]", "s"));
+		System.out.println(Pattern.matches("[^aeiou]", "a"));
+		System.out.println(Pattern.matches("[^aeiou]", "z"));
+		System.out.println(Pattern.matches("[abcd]+", "abccddd"));
+		System.out.println(Pattern.matches("[a-zA-Z]+", "Hello"));
+		System.out.println(Pattern.matches("[a-zA-Z]+", "Hello123"));
+		//Validate MobileNo
+		System.out.println(Pattern.matches("[0-9]{10}", "1234567891"));
+		System.out.println(Pattern.matches("[0-9]{10}", "123456789"));
+		System.out.println(Pattern.matches("[0-9]{10}", "ABCD67891"));
+		
+		//Adharcard Validation
+		System.out.println(Pattern.matches("[0-9]{3}\\s[0-9]{3}\\s[0-9]{3}", "123123123"));
+		System.out.println(Pattern.matches("[0-9]{4}\\s[0-9]{4}\\s[0-9]{4}", "123 123 123"));
+	}
+}

@@ -1,0 +1,7 @@
+INDEX VERSION 1.132+D:\infinite_java\RegularExpression\.metadata\.plugins\org.eclipse.jdt.core
+1865797976.index
+1880859750.index
+1439113437.index
+2731534558.index
+1622497297.index
+3389626489.index
