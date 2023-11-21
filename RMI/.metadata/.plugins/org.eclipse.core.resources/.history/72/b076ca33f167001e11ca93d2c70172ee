@@ -1,0 +1,4 @@
+
+public class HelloImpl extends UnicastRemoteObject implements Hello {
+
+}

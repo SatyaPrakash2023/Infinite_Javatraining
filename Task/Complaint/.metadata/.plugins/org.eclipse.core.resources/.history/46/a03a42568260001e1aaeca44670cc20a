@@ -1,0 +1,10 @@
+package com.java.comp;
+
+public class ComplaintDAOImpl implements ComplaintDAO {
+
+	@Override
+	public String addComplain(Complaint comp) {
+		
+	}
+
+}

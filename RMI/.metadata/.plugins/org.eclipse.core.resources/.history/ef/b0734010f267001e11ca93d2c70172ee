@@ -1,0 +1,12 @@
+import java.rmi.Naming;
+
+public class Server {
+	public static void main(String[] args) {
+		Hello obj;
+		try {
+			obj = new HelloImpl();
+			Naming.rebind("localhost", obj);
+			System.out.println("Server is Ready...");
+		}
+	}
+}

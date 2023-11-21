@@ -1,0 +1,13 @@
+import java.rmi.RemoteException;
+import java.rmi.server.UnicastRemoteObject;
+
+public class HelloImpl1 extends UnicastRemoteObject implements Hello {
+	protected HelloImpl1() throws RemoteException{
+		super();
+	}
+	
+	
+	public String sayHello() throws RemoteException{
+		return"Welcome to RMI Programing..";
+	}
+}

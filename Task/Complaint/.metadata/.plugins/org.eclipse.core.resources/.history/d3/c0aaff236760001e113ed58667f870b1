@@ -1,0 +1,7 @@
+package com.java.comp;
+
+public class Resolve {
+	private String ResolveID;
+	private string CompalintId;
+
+}

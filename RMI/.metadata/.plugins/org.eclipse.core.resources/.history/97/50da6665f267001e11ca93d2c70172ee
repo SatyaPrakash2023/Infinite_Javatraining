@@ -1,0 +1,9 @@
+import java.rmi.Naming;
+
+public class Client {
+	public static void main(String[] args) {
+		Hello hello;
+		
+		hello= (Hello)Naming.lookup("localhost")
+	}
+}

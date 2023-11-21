@@ -1,0 +1,707 @@
+2023-10-15 21:32:38,728 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 38) WFLYCLINF0001: Activating Infinispan subsystem.
+2023-10-15 21:32:38,731 INFO  [org.jboss.as.jsf] (ServerService Thread Pool -- 44) WFLYJSF0007: Activated the following JSF Implementations: [main]
+2023-10-15 21:32:38,734 INFO  [org.wildfly.extension.io] (ServerService Thread Pool -- 37) WFLYIO001: Worker 'default' has auto-configured to 16 core threads with 128 task threads based on your 8 available processors
+2023-10-15 21:32:38,737 INFO  [org.jboss.as.security] (ServerService Thread Pool -- 53) WFLYSEC0002: Activating Security Subsystem
+2023-10-15 21:32:38,738 INFO  [org.jboss.as.connector] (MSC service thread 1-6) WFLYJCA0009: Starting JCA Subsystem (IronJacamar 1.2.5.Final)
+2023-10-15 21:32:38,738 INFO  [org.jboss.as.security] (MSC service thread 1-6) WFLYSEC0001: Current PicketBox version=4.9.2.Final
+2023-10-15 21:32:38,739 WARN  [org.jboss.as.txn] (ServerService Thread Pool -- 54) WFLYTX0013: Node identifier property is set to the default value. Please make sure it is unique.
+2023-10-15 21:32:38,751 INFO  [org.jboss.as.naming] (ServerService Thread Pool -- 46) WFLYNAM0001: Activating Naming Subsystem
+2023-10-15 21:32:38,755 INFO  [org.jboss.as.webservices] (ServerService Thread Pool -- 56) WFLYWS0002: Activating WebServices Extension
+2023-10-15 21:32:38,779 INFO  [org.wildfly.extension.undertow] (ServerService Thread Pool -- 55) WFLYUT0003: Undertow 1.2.9.Final starting
+2023-10-15 21:32:38,780 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-7) WFLYUT0003: Undertow 1.2.9.Final starting
+2023-10-15 21:32:38,782 INFO  [org.jboss.as.connector.subsystems.datasources] (ServerService Thread Pool -- 33) WFLYJCA0004: Deploying JDBC-compliant driver class org.h2.Driver (version 1.3)
+2023-10-15 21:32:38,785 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-7) WFLYJCA0018: Started Driver service with driver-name = h2
+2023-10-15 21:32:38,812 INFO  [org.jboss.as.naming] (MSC service thread 1-6) WFLYNAM0003: Starting Naming Service
+2023-10-15 21:32:38,821 INFO  [org.jboss.as.mail.extension] (MSC service thread 1-6) WFLYMAIL0001: Bound mail session [java:jboss/mail/Default]
+2023-10-15 21:32:38,824 INFO  [org.wildfly.extension.undertow] (ServerService Thread Pool -- 55) WFLYUT0014: Creating file handler for path C:\Users\satyaprakashsh\wildfly-9.0.2.Final/welcome-content
+2023-10-15 21:32:39,065 INFO  [org.jboss.as.server.deployment.scanner] (MSC service thread 1-3) WFLYDS0013: Started FileSystemDeploymentService for directory C:\Users\satyaprakashsh\wildfly-9.0.2.Final\standalone\deployments
+2023-10-15 21:32:39,066 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-1) WFLYSRV0027: Starting deployment of "EjbCalc.jar" (runtime-name: "EjbCalc.jar")
+2023-10-15 21:32:39,078 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-5) WFLYUT0012: Started server default-server.
+2023-10-15 21:32:39,079 INFO  [org.jboss.remoting] (MSC service thread 1-2) JBoss Remoting version 4.0.9.Final
+2023-10-15 21:32:39,081 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-5) WFLYUT0018: Host default-host starting
+2023-10-15 21:32:39,092 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-1) WFLYUT0006: Undertow HTTP listener default listening on localhost/127.0.0.1:8080
+2023-10-15 21:32:39,124 INFO  [org.jboss.as.connector.subsystems.datasources] (MSC service thread 1-5) WFLYJCA0001: Bound data source [java:jboss/datasources/ExampleDS]
+2023-10-15 21:32:39,207 INFO  [org.jboss.ws.common.management] (MSC service thread 1-1) JBWS022052: Starting JBoss Web Services - Stack CXF Server 5.0.0.Final
+2023-10-15 21:32:39,268 INFO  [org.jboss.weld.deployer] (MSC service thread 1-1) WFLYWELD0003: Processing weld deployment EjbCalc.jar
+2023-10-15 21:32:39,315 INFO  [org.hibernate.validator.internal.util.Version] (MSC service thread 1-1) HV000001: Hibernate Validator 5.1.3.Final
+2023-10-15 21:32:39,356 INFO  [org.jboss.as.ejb3.deployment.processors.EjbJndiBindingsDeploymentUnitProcessor] (MSC service thread 1-1) JNDI bindings for session bean named Calculation in deployment unit deployment "EjbCalc.jar" are as follows:
+
+	java:global/EjbCalc/Calculation!com.java.ejb.CalculationRemote
+	java:app/EjbCalc/Calculation!com.java.ejb.CalculationRemote
+	java:module/Calculation!com.java.ejb.CalculationRemote
+	java:jboss/exported/EjbCalc/Calculation!com.java.ejb.CalculationRemote
+	java:global/EjbCalc/Calculation
+	java:app/EjbCalc/Calculation
+	java:module/Calculation
+
+2023-10-15 21:32:39,408 INFO  [org.jboss.weld.deployer] (MSC service thread 1-2) WFLYWELD0006: Starting Services for CDI deployment: EjbCalc.jar
+2023-10-15 21:32:39,425 INFO  [org.jboss.weld.Version] (MSC service thread 1-2) WELD-000900: 2.2.16 (SP1)
+2023-10-15 21:32:39,437 INFO  [org.jboss.weld.deployer] (MSC service thread 1-1) WFLYWELD0009: Starting weld service for deployment EjbCalc.jar
+2023-10-15 21:32:39,825 INFO  [org.jboss.as.server] (ServerService Thread Pool -- 34) WFLYSRV0010: Deployed "EjbCalc.jar" (runtime-name : "EjbCalc.jar")
+2023-10-15 21:32:39,948 INFO  [org.jboss.as] (Controller Boot Thread) WFLYSRV0060: Http management interface listening on http://127.0.0.1:9990/management
+2023-10-15 21:32:39,948 INFO  [org.jboss.as] (Controller Boot Thread) WFLYSRV0051: Admin console listening on http://127.0.0.1:9990
+2023-10-15 21:32:39,949 INFO  [org.jboss.as] (Controller Boot Thread) WFLYSRV0025: WildFly Full 9.0.2.Final (WildFly Core 1.0.2.Final) started in 2369ms - Started 288 of 461 services (218 services are lazy, passive or on-demand)
+2023-10-15 21:56:39,827 ERROR [org.jboss.remoting.remote.connection] (default I/O-1) JBREM000200: Remote connection failed: java.io.IOException: An existing connection was forcibly closed by the remote host
+2023-10-15 21:57:11,738 ERROR [org.jboss.remoting.remote.connection] (default I/O-2) JBREM000200: Remote connection failed: java.io.IOException: An existing connection was forcibly closed by the remote host
+2023-10-15 22:28:58,753 INFO  [org.jboss.as.server.deployment.scanner] (DeploymentScanner-threads - 2) WFLYDS0004: Found JsfDemos.war in deployment directory. To trigger deployment create a file called JsfDemos.war.dodeploy
+2023-10-15 22:28:58,758 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-5) WFLYSRV0027: Starting deployment of "JsfDemos.war" (runtime-name: "JsfDemos.war")
+2023-10-15 22:28:59,215 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-3) WFLYSRV0003: Could not index class module-info.class at /C:/Users/satyaprakashsh/wildfly-9.0.2.Final/standalone/deployments/JsfDemos.war/WEB-INF/lib/jackson-annotations-2.12.6.jar: java.lang.IllegalStateException: Unknown tag! pos=3 poolCount = 10
+	at org.jboss.jandex.Indexer.processConstantPool(Indexer.java:665)
+	at org.jboss.jandex.Indexer.index(Indexer.java:699)
+	at org.jboss.as.server.deployment.annotation.ResourceRootIndexer.indexResourceRoot(ResourceRootIndexer.java:99)
+	at org.jboss.as.server.deployment.annotation.AnnotationIndexProcessor.deploy(AnnotationIndexProcessor.java:51)
+	at org.jboss.as.server.deployment.DeploymentUnitPhaseService.start(DeploymentUnitPhaseService.java:156)
+	at org.jboss.msc.service.ServiceControllerImpl$StartTask.startService(ServiceControllerImpl.java:1948)
+	at org.jboss.msc.service.ServiceControllerImpl$StartTask.run(ServiceControllerImpl.java:1881)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+
+2023-10-15 22:28:59,226 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-3) WFLYSRV0003: Could not index class module-info.class at /C:/Users/satyaprakashsh/wildfly-9.0.2.Final/standalone/deployments/JsfDemos.war/WEB-INF/lib/jackson-core-2.12.6.jar: java.lang.IllegalStateException: Unknown tag! pos=3 poolCount = 34
+	at org.jboss.jandex.Indexer.processConstantPool(Indexer.java:665)
+	at org.jboss.jandex.Indexer.index(Indexer.java:699)
+	at org.jboss.as.server.deployment.annotation.ResourceRootIndexer.indexResourceRoot(ResourceRootIndexer.java:99)
+	at org.jboss.as.server.deployment.annotation.AnnotationIndexProcessor.deploy(AnnotationIndexProcessor.java:51)
+	at org.jboss.as.server.deployment.DeploymentUnitPhaseService.start(DeploymentUnitPhaseService.java:156)
+	at org.jboss.msc.service.ServiceControllerImpl$StartTask.startService(ServiceControllerImpl.java:1948)
+	at org.jboss.msc.service.ServiceControllerImpl$StartTask.run(ServiceControllerImpl.java:1881)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+
+2023-10-15 22:28:59,288 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-3) WFLYSRV0003: Could not index class module-info.class at /C:/Users/satyaprakashsh/wildfly-9.0.2.Final/standalone/deployments/JsfDemos.war/WEB-INF/lib/jackson-databind-2.12.6.1.jar: java.lang.IllegalStateException: Unknown tag! pos=3 poolCount = 66
+	at org.jboss.jandex.Indexer.processConstantPool(Indexer.java:665)
+	at org.jboss.jandex.Indexer.index(Indexer.java:699)
+	at org.jboss.as.server.deployment.annotation.ResourceRootIndexer.indexResourceRoot(ResourceRootIndexer.java:99)
+	at org.jboss.as.server.deployment.annotation.AnnotationIndexProcessor.deploy(AnnotationIndexProcessor.java:51)
+	at org.jboss.as.server.deployment.DeploymentUnitPhaseService.start(DeploymentUnitPhaseService.java:156)
+	at org.jboss.msc.service.ServiceControllerImpl$StartTask.startService(ServiceControllerImpl.java:1948)
+	at org.jboss.msc.service.ServiceControllerImpl$StartTask.run(ServiceControllerImpl.java:1881)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+
+2023-10-15 22:28:59,288 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-3) WFLYSRV0003: Could not index class module-info.class at /C:/Users/satyaprakashsh/wildfly-9.0.2.Final/standalone/deployments/JsfDemos.war/WEB-INF/lib/jakarta.annotation-api-2.1.1.jar: java.lang.IllegalStateException: Unknown tag! pos=4 poolCount = 17
+	at org.jboss.jandex.Indexer.processConstantPool(Indexer.java:665)
+	at org.jboss.jandex.Indexer.index(Indexer.java:699)
+	at org.jboss.as.server.deployment.annotation.ResourceRootIndexer.indexResourceRoot(ResourceRootIndexer.java:99)
+	at org.jboss.as.server.deployment.annotation.AnnotationIndexProcessor.deploy(AnnotationIndexProcessor.java:51)
+	at org.jboss.as.server.deployment.DeploymentUnitPhaseService.start(DeploymentUnitPhaseService.java:156)
+	at org.jboss.msc.service.ServiceControllerImpl$StartTask.startService(ServiceControllerImpl.java:1948)
+	at org.jboss.msc.service.ServiceControllerImpl$StartTask.run(ServiceControllerImpl.java:1881)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+
+2023-10-15 22:28:59,289 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-3) WFLYSRV0003: Could not index class module-info.class at /C:/Users/satyaprakashsh/wildfly-9.0.2.Final/standalone/deployments/JsfDemos.war/WEB-INF/lib/jakarta.inject-api-2.0.1.jar: java.lang.IllegalStateException: Unknown tag! pos=4 poolCount = 13
+	at org.jboss.jandex.Indexer.processConstantPool(Indexer.java:665)
+	at org.jboss.jandex.Indexer.index(Indexer.java:699)
+	at org.jboss.as.server.deployment.annotation.ResourceRootIndexer.indexResourceRoot(ResourceRootIndexer.java:99)
+	at org.jboss.as.server.deployment.annotation.AnnotationIndexProcessor.deploy(AnnotationIndexProcessor.java:51)
+	at org.jboss.as.server.deployment.DeploymentUnitPhaseService.start(DeploymentUnitPhaseService.java:156)
+	at org.jboss.msc.service.ServiceControllerImpl$StartTask.startService(ServiceControllerImpl.java:1948)
+	at org.jboss.msc.service.ServiceControllerImpl$StartTask.run(ServiceControllerImpl.java:1881)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+
+2023-10-15 22:28:59,291 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-3) WFLYSRV0003: Could not index class module-info.class at /C:/Users/satyaprakashsh/wildfly-9.0.2.Final/standalone/deployments/JsfDemos.war/WEB-INF/lib/jakarta.validation-api-3.0.2.jar: java.lang.IllegalStateException: Unknown tag! pos=4 poolCount = 34
+	at org.jboss.jandex.Indexer.processConstantPool(Indexer.java:665)
+	at org.jboss.jandex.Indexer.index(Indexer.java:699)
+	at org.jboss.as.server.deployment.annotation.ResourceRootIndexer.indexResourceRoot(ResourceRootIndexer.java:99)
+	at org.jboss.as.server.deployment.annotation.AnnotationIndexProcessor.deploy(AnnotationIndexProcessor.java:51)
+	at org.jboss.as.server.deployment.DeploymentUnitPhaseService.start(DeploymentUnitPhaseService.java:156)
+	at org.jboss.msc.service.ServiceControllerImpl$StartTask.startService(ServiceControllerImpl.java:1948)
+	at org.jboss.msc.service.ServiceControllerImpl$StartTask.run(ServiceControllerImpl.java:1881)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+
+2023-10-15 22:28:59,296 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-3) WFLYSRV0003: Could not index class module-info.class at /C:/Users/satyaprakashsh/wildfly-9.0.2.Final/standalone/deployments/JsfDemos.war/WEB-INF/lib/jakarta.ws.rs-api-3.1.0.jar: java.lang.IllegalStateException: Unknown tag! pos=4 poolCount = 38
+	at org.jboss.jandex.Indexer.processConstantPool(Indexer.java:665)
+	at org.jboss.jandex.Indexer.index(Indexer.java:699)
+	at org.jboss.as.server.deployment.annotation.ResourceRootIndexer.indexResourceRoot(ResourceRootIndexer.java:99)
+	at org.jboss.as.server.deployment.annotation.AnnotationIndexProcessor.deploy(AnnotationIndexProcessor.java:51)
+	at org.jboss.as.server.deployment.DeploymentUnitPhaseService.start(DeploymentUnitPhaseService.java:156)
+	at org.jboss.msc.service.ServiceControllerImpl$StartTask.startService(ServiceControllerImpl.java:1948)
+	at org.jboss.msc.service.ServiceControllerImpl$StartTask.run(ServiceControllerImpl.java:1881)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+
+2023-10-15 22:29:00,525 INFO  [org.jboss.weld.deployer] (MSC service thread 1-6) WFLYWELD0003: Processing weld deployment JsfDemos.war
+2023-10-15 22:29:00,667 INFO  [org.jboss.weld.deployer] (MSC service thread 1-8) WFLYWELD0006: Starting Services for CDI deployment: JsfDemos.war
+2023-10-15 22:29:00,687 INFO  [org.jboss.weld.deployer] (MSC service thread 1-2) WFLYWELD0009: Starting weld service for deployment JsfDemos.war
+2023-10-15 22:29:01,127 INFO  [javax.enterprise.resource.webcontainer.jsf.config] (ServerService Thread Pool -- 82) Initializing Mojarra 2.2.12-jbossorg-2 20150729-1131 for context '/JsfDemos'
+2023-10-15 22:29:03,029 INFO  [org.wildfly.extension.undertow] (ServerService Thread Pool -- 82) WFLYUT0021: Registered web context: /JsfDemos
+2023-10-15 22:29:03,062 INFO  [org.jboss.as.server] (DeploymentScanner-threads - 1) WFLYSRV0010: Deployed "JsfDemos.war" (runtime-name : "JsfDemos.war")
+2023-10-15 22:29:11,991 INFO  [org.wildfly.naming] (default task-20) WFNAM00025: org.jboss.naming.remote.client.InitialContextFactory is deprecated; new applications should use org.wildfly.naming.client.WildFlyInitialContextFactory instead
+2023-10-15 22:29:11,997 INFO  [org.wildfly.naming] (default task-20) WildFly Naming version 1.0.15.Final
+2023-10-15 22:29:12,032 INFO  [org.wildfly.security] (default task-20) ELY00001: WildFly Elytron version 1.19.0.Final
+2023-10-15 22:29:12,033 INFO  [stdout] (default task-20) CalculatorBean
+2023-10-15 22:29:12,039 INFO  [org.jboss.ejb.client] (default task-20) JBoss EJB Client version 2.1.1.Final
+2023-10-15 22:29:12,043 INFO  [stdout] (default task-20) EJB Business Logic Getting Started
+2023-10-15 22:29:12,048 WARNING [javax.enterprise.resource.webcontainer.jsf.lifecycle] (default task-20) /Calc.jsp(22,9) '#{calculation.addition}' java.lang.IllegalStateException: EJBCLIENT000025: No EJB receiver available for handling [appName:, moduleName:EjbCalculation, distinctName:] combination for invocation context org.jboss.ejb.client.EJBClientInvocationContext@1985e14: org.apache.jasper.el.JspELException: /Calc.jsp(22,9) '#{calculation.addition}' java.lang.IllegalStateException: EJBCLIENT000025: No EJB receiver available for handling [appName:, moduleName:EjbCalculation, distinctName:] combination for invocation context org.jboss.ejb.client.EJBClientInvocationContext@1985e14
+	at org.apache.jasper.el.JspMethodExpression.invoke(JspMethodExpression.java:77)
+	at javax.faces.event.MethodExpressionActionListener.processAction(MethodExpressionActionListener.java:147)
+	at javax.faces.event.ActionEvent.processListener(ActionEvent.java:88)
+	at javax.faces.component.UIComponentBase.broadcast(UIComponentBase.java:814)
+	at javax.faces.component.UICommand.broadcast(UICommand.java:300)
+	at javax.faces.component.UIViewRoot.broadcastEvents(UIViewRoot.java:790)
+	at javax.faces.component.UIViewRoot.processApplication(UIViewRoot.java:1282)
+	at com.sun.faces.lifecycle.InvokeApplicationPhase.execute(InvokeApplicationPhase.java:81)
+	at com.sun.faces.lifecycle.Phase.doPhase(Phase.java:101)
+	at com.sun.faces.lifecycle.LifecycleImpl.execute(LifecycleImpl.java:198)
+	at javax.faces.webapp.FacesServlet.service(FacesServlet.java:658)
+	at io.undertow.servlet.handlers.ServletHandler.handleRequest(ServletHandler.java:86)
+	at io.undertow.servlet.handlers.security.ServletSecurityRoleHandler.handleRequest(ServletSecurityRoleHandler.java:62)
+	at io.undertow.servlet.handlers.ServletDispatchingHandler.handleRequest(ServletDispatchingHandler.java:36)
+	at org.wildfly.extension.undertow.security.SecurityContextAssociationHandler.handleRequest(SecurityContextAssociationHandler.java:78)
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at io.undertow.servlet.handlers.security.SSLInformationAssociationHandler.handleRequest(SSLInformationAssociationHandler.java:131)
+	at io.undertow.servlet.handlers.security.ServletAuthenticationCallHandler.handleRequest(ServletAuthenticationCallHandler.java:57)
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at io.undertow.security.handlers.AbstractConfidentialityHandler.handleRequest(AbstractConfidentialityHandler.java:46)
+	at io.undertow.servlet.handlers.security.ServletConfidentialityConstraintHandler.handleRequest(ServletConfidentialityConstraintHandler.java:64)
+	at io.undertow.security.handlers.AuthenticationMechanismsHandler.handleRequest(AuthenticationMechanismsHandler.java:58)
+	at io.undertow.servlet.handlers.security.CachedAuthenticatedSessionHandler.handleRequest(CachedAuthenticatedSessionHandler.java:72)
+	at io.undertow.security.handlers.NotificationReceiverHandler.handleRequest(NotificationReceiverHandler.java:50)
+	at io.undertow.security.handlers.SecurityInitialHandler.handleRequest(SecurityInitialHandler.java:76)
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at org.wildfly.extension.undertow.security.jacc.JACCContextIdHandler.handleRequest(JACCContextIdHandler.java:61)
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at io.undertow.servlet.handlers.ServletInitialHandler.handleFirstRequest(ServletInitialHandler.java:282)
+	at io.undertow.servlet.handlers.ServletInitialHandler.dispatchRequest(ServletInitialHandler.java:261)
+	at io.undertow.servlet.handlers.ServletInitialHandler.access$000(ServletInitialHandler.java:80)
+	at io.undertow.servlet.handlers.ServletInitialHandler$1.handleRequest(ServletInitialHandler.java:172)
+	at io.undertow.server.Connectors.executeRootHandler(Connectors.java:199)
+	at io.undertow.server.HttpServerExchange$1.run(HttpServerExchange.java:774)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.IllegalStateException: EJBCLIENT000025: No EJB receiver available for handling [appName:, moduleName:EjbCalculation, distinctName:] combination for invocation context org.jboss.ejb.client.EJBClientInvocationContext@1985e14
+	at org.jboss.ejb.client.EJBClientContext.requireEJBReceiver(EJBClientContext.java:774)
+	at org.jboss.ejb.client.ReceiverInterceptor.handleInvocation(ReceiverInterceptor.java:116)
+	at org.jboss.ejb.client.EJBClientInvocationContext.sendRequest(EJBClientInvocationContext.java:186)
+	at org.jboss.ejb.client.EJBInvocationHandler.sendRequestWithPossibleRetries(EJBInvocationHandler.java:255)
+	at org.jboss.ejb.client.EJBInvocationHandler.doInvoke(EJBInvocationHandler.java:200)
+	at org.jboss.ejb.client.EJBInvocationHandler.doInvoke(EJBInvocationHandler.java:183)
+	at org.jboss.ejb.client.EJBInvocationHandler.invoke(EJBInvocationHandler.java:146)
+	at com.sun.proxy.$Proxy39.add(Unknown Source)
+	at com.java.jsf.Calculation.addition(Calculation.java:58)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at com.sun.el.parser.AstValue.invoke(AstValue.java:292)
+	at com.sun.el.MethodExpressionImpl.invoke(MethodExpressionImpl.java:304)
+	at org.jboss.weld.util.el.ForwardingMethodExpression.invoke(ForwardingMethodExpression.java:40)
+	at org.jboss.weld.el.WeldMethodExpression.invoke(WeldMethodExpression.java:50)
+	at org.apache.jasper.el.JspMethodExpression.invoke(JspMethodExpression.java:68)
+	... 37 more
+
+2023-10-15 22:29:12,053 ERROR [io.undertow.request] (default task-20) UT005023: Exception handling request to /JsfDemos/Calc.jsf;jsessionid=84O2Li4ah9BHpCs3yLDxu8LyQVIcGO4zdJl5wJu7.ics-lt-87hk9k3: javax.servlet.ServletException: /Calc.jsp(22,9) '#{calculation.addition}' java.lang.IllegalStateException: EJBCLIENT000025: No EJB receiver available for handling [appName:, moduleName:EjbCalculation, distinctName:] combination for invocation context org.jboss.ejb.client.EJBClientInvocationContext@1985e14
+	at javax.faces.webapp.FacesServlet.service(FacesServlet.java:671)
+	at io.undertow.servlet.handlers.ServletHandler.handleRequest(ServletHandler.java:86)
+	at io.undertow.servlet.handlers.security.ServletSecurityRoleHandler.handleRequest(ServletSecurityRoleHandler.java:62)
+	at io.undertow.servlet.handlers.ServletDispatchingHandler.handleRequest(ServletDispatchingHandler.java:36)
+	at org.wildfly.extension.undertow.security.SecurityContextAssociationHandler.handleRequest(SecurityContextAssociationHandler.java:78)
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at io.undertow.servlet.handlers.security.SSLInformationAssociationHandler.handleRequest(SSLInformationAssociationHandler.java:131)
+	at io.undertow.servlet.handlers.security.ServletAuthenticationCallHandler.handleRequest(ServletAuthenticationCallHandler.java:57)
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at io.undertow.security.handlers.AbstractConfidentialityHandler.handleRequest(AbstractConfidentialityHandler.java:46)
+	at io.undertow.servlet.handlers.security.ServletConfidentialityConstraintHandler.handleRequest(ServletConfidentialityConstraintHandler.java:64)
+	at io.undertow.security.handlers.AuthenticationMechanismsHandler.handleRequest(AuthenticationMechanismsHandler.java:58)
+	at io.undertow.servlet.handlers.security.CachedAuthenticatedSessionHandler.handleRequest(CachedAuthenticatedSessionHandler.java:72)
+	at io.undertow.security.handlers.NotificationReceiverHandler.handleRequest(NotificationReceiverHandler.java:50)
+	at io.undertow.security.handlers.SecurityInitialHandler.handleRequest(SecurityInitialHandler.java:76)
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at org.wildfly.extension.undertow.security.jacc.JACCContextIdHandler.handleRequest(JACCContextIdHandler.java:61)
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at io.undertow.servlet.handlers.ServletInitialHandler.handleFirstRequest(ServletInitialHandler.java:282)
+	at io.undertow.servlet.handlers.ServletInitialHandler.dispatchRequest(ServletInitialHandler.java:261)
+	at io.undertow.servlet.handlers.ServletInitialHandler.access$000(ServletInitialHandler.java:80)
+	at io.undertow.servlet.handlers.ServletInitialHandler$1.handleRequest(ServletInitialHandler.java:172)
+	at io.undertow.server.Connectors.executeRootHandler(Connectors.java:199)
+	at io.undertow.server.HttpServerExchange$1.run(HttpServerExchange.java:774)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: org.apache.jasper.el.JspELException: /Calc.jsp(22,9) '#{calculation.addition}' java.lang.IllegalStateException: EJBCLIENT000025: No EJB receiver available for handling [appName:, moduleName:EjbCalculation, distinctName:] combination for invocation context org.jboss.ejb.client.EJBClientInvocationContext@1985e14
+	at org.apache.jasper.el.JspMethodExpression.invoke(JspMethodExpression.java:77)
+	at javax.faces.event.MethodExpressionActionListener.processAction(MethodExpressionActionListener.java:147)
+	at javax.faces.event.ActionEvent.processListener(ActionEvent.java:88)
+	at javax.faces.component.UIComponentBase.broadcast(UIComponentBase.java:814)
+	at javax.faces.component.UICommand.broadcast(UICommand.java:300)
+	at javax.faces.component.UIViewRoot.broadcastEvents(UIViewRoot.java:790)
+	at javax.faces.component.UIViewRoot.processApplication(UIViewRoot.java:1282)
+	at com.sun.faces.lifecycle.InvokeApplicationPhase.execute(InvokeApplicationPhase.java:81)
+	at com.sun.faces.lifecycle.Phase.doPhase(Phase.java:101)
+	at com.sun.faces.lifecycle.LifecycleImpl.execute(LifecycleImpl.java:198)
+	at javax.faces.webapp.FacesServlet.service(FacesServlet.java:658)
+	... 27 more
+Caused by: java.lang.IllegalStateException: EJBCLIENT000025: No EJB receiver available for handling [appName:, moduleName:EjbCalculation, distinctName:] combination for invocation context org.jboss.ejb.client.EJBClientInvocationContext@1985e14
+	at org.jboss.ejb.client.EJBClientContext.requireEJBReceiver(EJBClientContext.java:774)
+	at org.jboss.ejb.client.ReceiverInterceptor.handleInvocation(ReceiverInterceptor.java:116)
+	at org.jboss.ejb.client.EJBClientInvocationContext.sendRequest(EJBClientInvocationContext.java:186)
+	at org.jboss.ejb.client.EJBInvocationHandler.sendRequestWithPossibleRetries(EJBInvocationHandler.java:255)
+	at org.jboss.ejb.client.EJBInvocationHandler.doInvoke(EJBInvocationHandler.java:200)
+	at org.jboss.ejb.client.EJBInvocationHandler.doInvoke(EJBInvocationHandler.java:183)
+	at org.jboss.ejb.client.EJBInvocationHandler.invoke(EJBInvocationHandler.java:146)
+	at com.sun.proxy.$Proxy39.add(Unknown Source)
+	at com.java.jsf.Calculation.addition(Calculation.java:58)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at com.sun.el.parser.AstValue.invoke(AstValue.java:292)
+	at com.sun.el.MethodExpressionImpl.invoke(MethodExpressionImpl.java:304)
+	at org.jboss.weld.util.el.ForwardingMethodExpression.invoke(ForwardingMethodExpression.java:40)
+	at org.jboss.weld.el.WeldMethodExpression.invoke(WeldMethodExpression.java:50)
+	at org.apache.jasper.el.JspMethodExpression.invoke(JspMethodExpression.java:68)
+	... 37 more
+
+2023-10-15 22:30:17,014 INFO  [stdout] (default task-22) Calculation
+2023-10-15 22:30:17,018 INFO  [stdout] (default task-22) EJB Business Logic Getting Started
+2023-10-15 23:18:59,977 INFO  [org.jboss.modules] (main) JBoss Modules version 1.4.3.Final
+2023-10-15 23:19:00,108 INFO  [org.jboss.msc] (main) JBoss MSC version 1.2.6.Final
+2023-10-15 23:19:00,152 INFO  [org.jboss.as] (MSC service thread 1-7) WFLYSRV0049: WildFly Full 9.0.2.Final (WildFly Core 1.0.2.Final) starting
+2023-10-15 23:19:00,154 DEBUG [org.jboss.as.config] (MSC service thread 1-7) Configured system properties:
+	awt.toolkit = sun.awt.windows.WToolkit
+	file.encoding = UTF-8
+	file.encoding.pkg = sun.io
+	file.separator = \
+	java.awt.graphicsenv = sun.awt.Win32GraphicsEnvironment
+	java.awt.headless = true
+	java.awt.printerjob = sun.awt.windows.WPrinterJob
+	java.class.path = C:\Users\satyaprakashsh\wildfly-9.0.2.Final\jboss-modules.jar
+	java.class.version = 52.0
+	java.endorsed.dirs = C:\Program Files\Java\jdk1.8.0_121\jre\lib\endorsed
+	java.ext.dirs = C:\Program Files\Java\jdk1.8.0_121\jre\lib\ext;C:\WINDOWS\Sun\Java\lib\ext
+	java.home = C:\Program Files\Java\jdk1.8.0_121\jre
+	java.io.tmpdir = C:\Users\SATYAP~1\AppData\Local\Temp\
+	java.library.path = C:\Program Files\Java\jdk1.8.0_121\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;native;C:/Users/satyaprakashsh/Downloads/eclipse-jee-2023-03-R-win32-x86_64/eclipse//plugins/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.6.v20230204-1729/jre/bin/server;C:/Users/satyaprakashsh/Downloads/eclipse-jee-2023-03-R-win32-x86_64/eclipse//plugins/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.6.v20230204-1729/jre/bin;C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Program Files\Java\jdk1.8.0_121\bin;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\satyaprakashsh\AppData\Local\Microsoft\WindowsApps;;C:\Users\satyaprakashsh\Downloads\eclipse-jee-2023-03-R-win32-x86_64\eclipse;;.
+	java.net.preferIPv4Stack = true
+	java.runtime.name = Java(TM) SE Runtime Environment
+	java.runtime.version = 1.8.0_121-b13
+	java.specification.name = Java Platform API Specification
+	java.specification.vendor = Oracle Corporation
+	java.specification.version = 1.8
+	java.util.logging.manager = org.jboss.logmanager.LogManager
+	java.vendor = Oracle Corporation
+	java.vendor.url = http://java.oracle.com/
+	java.vendor.url.bug = http://bugreport.sun.com/bugreport/
+	java.version = 1.8.0_121
+	java.vm.info = mixed mode
+	java.vm.name = Java HotSpot(TM) 64-Bit Server VM
+	java.vm.specification.name = Java Virtual Machine Specification
+	java.vm.specification.vendor = Oracle Corporation
+	java.vm.specification.version = 1.8
+	java.vm.vendor = Oracle Corporation
+	java.vm.version = 25.121-b13
+	javax.management.builder.initial = org.jboss.as.jmx.PluggableMBeanServerBuilder
+	javax.xml.datatype.DatatypeFactory = __redirected.__DatatypeFactory
+	javax.xml.parsers.DocumentBuilderFactory = __redirected.__DocumentBuilderFactory
+	javax.xml.parsers.SAXParserFactory = __redirected.__SAXParserFactory
+	javax.xml.stream.XMLEventFactory = __redirected.__XMLEventFactory
+	javax.xml.stream.XMLInputFactory = __redirected.__XMLInputFactory
+	javax.xml.stream.XMLOutputFactory = __redirected.__XMLOutputFactory
+	javax.xml.transform.TransformerFactory = __redirected.__TransformerFactory
+	javax.xml.validation.SchemaFactory:http://www.w3.org/2001/XMLSchema = __redirected.__SchemaFactory
+	javax.xml.xpath.XPathFactory:http://java.sun.com/jaxp/xpath/dom = __redirected.__XPathFactory
+	jboss.bind.address = localhost
+	jboss.bind.address.management = localhost
+	jboss.home.dir = C:\Users\satyaprakashsh\wildfly-9.0.2.Final
+	jboss.host.name = ics-lt-87hk9k3
+	jboss.modules.dir = C:\Users\satyaprakashsh\wildfly-9.0.2.Final\modules
+	jboss.modules.system.pkgs = org.jboss.byteman
+	jboss.node.name = ics-lt-87hk9k3
+	jboss.qualified.host.name = ics-lt-87hk9k3
+	jboss.server.base.dir = C:\Users\satyaprakashsh\wildfly-9.0.2.Final\standalone
+	jboss.server.config.dir = C:\Users\satyaprakashsh\wildfly-9.0.2.Final\standalone\configuration
+	jboss.server.data.dir = C:\Users\satyaprakashsh\wildfly-9.0.2.Final\standalone\data
+	jboss.server.deploy.dir = C:\Users\satyaprakashsh\wildfly-9.0.2.Final\standalone\data\content
+	jboss.server.log.dir = C:\Users\satyaprakashsh\wildfly-9.0.2.Final\standalone\log
+	jboss.server.name = ics-lt-87hk9k3
+	jboss.server.persist.config = true
+	jboss.server.temp.dir = C:\Users\satyaprakashsh\wildfly-9.0.2.Final\standalone\tmp
+	line.separator = 
+
+	logging.configuration = file:C:\Users\satyaprakashsh\wildfly-9.0.2.Final\standalone\configuration\logging.properties
+	module.path = C:\Users\satyaprakashsh\wildfly-9.0.2.Final\modules
+	org.jboss.boot.log.file = C:\Users\satyaprakashsh\wildfly-9.0.2.Final\standalone\log\boot.log
+	org.jboss.logmanager.nocolor = true
+	org.jboss.resolver.warning = true
+	org.xml.sax.driver = __redirected.__XMLReaderFactory
+	os.arch = amd64
+	os.name = Windows 10
+	os.version = 10.0
+	path.separator = ;
+	program.name = JBossTools: WildFly 9.x
+	sun.arch.data.model = 64
+	sun.boot.class.path = C:\Program Files\Java\jdk1.8.0_121\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_121\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_121\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.8.0_121\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_121\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_121\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_121\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_121\jre\classes
+	sun.boot.library.path = C:\Program Files\Java\jdk1.8.0_121\jre\bin
+	sun.cpu.endian = little
+	sun.cpu.isalist = amd64
+	sun.desktop = windows
+	sun.io.unicode.encoding = UnicodeLittle
+	sun.java.command = org.jboss.modules.Main -mp C:\Users\satyaprakashsh\wildfly-9.0.2.Final\modules -jaxpmodule javax.xml.jaxp-provider -jaxpmodule javax.xml.jaxp-provider org.jboss.as.standalone -b localhost --server-config=standalone.xml -Djboss.server.base.dir=C:\Users\satyaprakashsh\wildfly-9.0.2.Final\standalone
+	sun.java.launcher = SUN_STANDARD
+	sun.jnu.encoding = Cp1252
+	sun.management.compiler = HotSpot 64-Bit Tiered Compilers
+	sun.os.patch.level = 
+	sun.rmi.dgc.client.gcInterval = 3600000
+	sun.rmi.dgc.server.gcInterval = 3600000
+	user.country = US
+	user.dir = C:\Users\satyaprakashsh\wildfly-9.0.2.Final\bin
+	user.home = C:\Users\satyaprakashsh
+	user.language = en
+	user.name = satyaprakashsh
+	user.script = 
+	user.timezone = America/Los_Angeles
+	user.variant = 
+2023-10-15 23:19:00,155 DEBUG [org.jboss.as.config] (MSC service thread 1-7) VM Arguments: -Dprogram.name=JBossTools: WildFly 9.x -Xms64m -Xmx512m -XX:MaxPermSize=256m -Dorg.jboss.resolver.warning=true -Djava.net.preferIPv4Stack=true -Dsun.rmi.dgc.client.gcInterval=3600000 -Dsun.rmi.dgc.server.gcInterval=3600000 -Djboss.modules.system.pkgs=org.jboss.byteman -Djava.awt.headless=true -Dorg.jboss.boot.log.file=C:\Users\satyaprakashsh\wildfly-9.0.2.Final\standalone\log\boot.log -Dlogging.configuration=file:C:\Users\satyaprakashsh\wildfly-9.0.2.Final\standalone\configuration\logging.properties -Djboss.home.dir=C:\Users\satyaprakashsh\wildfly-9.0.2.Final -Dorg.jboss.logmanager.nocolor=true -Djboss.bind.address.management=localhost -Dfile.encoding=UTF-8 
+2023-10-15 23:19:00,875 INFO  [org.jboss.as.controller.management-deprecated] (ServerService Thread Pool -- 7) WFLYCTL0028: Attribute 'job-repository-type' in the resource at address '/subsystem=batch' is deprecated, and may be removed in future version. See the attribute description in the output of the read-resource-description operation to learn more about the deprecation.
+2023-10-15 23:19:00,881 INFO  [org.jboss.as.controller.management-deprecated] (ServerService Thread Pool -- 22) WFLYCTL0028: Attribute 'enabled' in the resource at address '/subsystem=datasources/data-source=ExampleDS' is deprecated, and may be removed in future version. See the attribute description in the output of the read-resource-description operation to learn more about the deprecation.
+2023-10-15 23:19:00,905 INFO  [org.jboss.as.server.deployment.scanner] (DeploymentScanner-threads - 1) WFLYDS0004: Found EjbCalc.jar in deployment directory. To trigger deployment create a file called EjbCalc.jar.dodeploy
+2023-10-15 23:19:00,905 INFO  [org.jboss.as.server.deployment.scanner] (DeploymentScanner-threads - 1) WFLYDS0004: Found JsfDemos.war in deployment directory. To trigger deployment create a file called JsfDemos.war.dodeploy
+2023-10-15 23:19:00,907 INFO  [org.jboss.as.server.deployment.scanner] (DeploymentScanner-threads - 1) WFLYDS0004: Found Ejbpractice.jar in deployment directory. To trigger deployment create a file called Ejbpractice.jar.dodeploy
+2023-10-15 23:19:00,930 INFO  [org.jboss.as.server] (Controller Boot Thread) WFLYSRV0039: Creating http management service using socket-binding (management-http)
+2023-10-15 23:19:00,944 INFO  [org.xnio] (MSC service thread 1-7) XNIO version 3.3.1.Final
+2023-10-15 23:19:00,952 INFO  [org.xnio.nio] (MSC service thread 1-7) XNIO NIO Implementation Version 3.3.1.Final
+2023-10-15 23:19:00,980 INFO  [org.wildfly.extension.io] (ServerService Thread Pool -- 37) WFLYIO001: Worker 'default' has auto-configured to 16 core threads with 128 task threads based on your 8 available processors
+2023-10-15 23:19:00,982 INFO  [org.jboss.as.security] (ServerService Thread Pool -- 53) WFLYSEC0002: Activating Security Subsystem
+2023-10-15 23:19:00,982 WARN  [org.jboss.as.txn] (ServerService Thread Pool -- 54) WFLYTX0013: Node identifier property is set to the default value. Please make sure it is unique.
+2023-10-15 23:19:00,991 INFO  [org.jboss.as.security] (MSC service thread 1-6) WFLYSEC0001: Current PicketBox version=4.9.2.Final
+2023-10-15 23:19:01,001 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 38) WFLYCLINF0001: Activating Infinispan subsystem.
+2023-10-15 23:19:01,003 INFO  [org.jboss.as.naming] (ServerService Thread Pool -- 46) WFLYNAM0001: Activating Naming Subsystem
+2023-10-15 23:19:01,017 INFO  [org.jboss.as.webservices] (ServerService Thread Pool -- 56) WFLYWS0002: Activating WebServices Extension
+2023-10-15 23:19:01,036 INFO  [org.jboss.as.jsf] (ServerService Thread Pool -- 44) WFLYJSF0007: Activated the following JSF Implementations: [main]
+2023-10-15 23:19:01,038 INFO  [org.jboss.as.connector] (MSC service thread 1-1) WFLYJCA0009: Starting JCA Subsystem (IronJacamar 1.2.5.Final)
+2023-10-15 23:19:01,073 INFO  [org.wildfly.extension.undertow] (ServerService Thread Pool -- 55) WFLYUT0003: Undertow 1.2.9.Final starting
+2023-10-15 23:19:01,071 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-2) WFLYUT0003: Undertow 1.2.9.Final starting
+2023-10-15 23:19:01,096 INFO  [org.jboss.as.naming] (MSC service thread 1-6) WFLYNAM0003: Starting Naming Service
+2023-10-15 23:19:01,100 INFO  [org.jboss.as.connector.subsystems.datasources] (ServerService Thread Pool -- 33) WFLYJCA0004: Deploying JDBC-compliant driver class org.h2.Driver (version 1.3)
+2023-10-15 23:19:01,100 INFO  [org.jboss.as.mail.extension] (MSC service thread 1-6) WFLYMAIL0001: Bound mail session [java:jboss/mail/Default]
+2023-10-15 23:19:01,105 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-8) WFLYJCA0018: Started Driver service with driver-name = h2
+2023-10-15 23:19:01,256 INFO  [org.wildfly.extension.undertow] (ServerService Thread Pool -- 55) WFLYUT0014: Creating file handler for path C:\Users\satyaprakashsh\wildfly-9.0.2.Final/welcome-content
+2023-10-15 23:19:01,536 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-1) WFLYSRV0027: Starting deployment of "EjbCalc.jar" (runtime-name: "EjbCalc.jar")
+2023-10-15 23:19:01,537 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-5) WFLYSRV0027: Starting deployment of "Ejbpractice.jar" (runtime-name: "Ejbpractice.jar")
+2023-10-15 23:19:01,537 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-6) WFLYSRV0027: Starting deployment of "JsfDemos.war" (runtime-name: "JsfDemos.war")
+2023-10-15 23:19:01,539 INFO  [org.jboss.as.server.deployment.scanner] (MSC service thread 1-3) WFLYDS0013: Started FileSystemDeploymentService for directory C:\Users\satyaprakashsh\wildfly-9.0.2.Final\standalone\deployments
+2023-10-15 23:19:01,542 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-5) WFLYUT0012: Started server default-server.
+2023-10-15 23:19:01,546 INFO  [org.jboss.remoting] (MSC service thread 1-7) JBoss Remoting version 4.0.9.Final
+2023-10-15 23:19:01,550 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-5) WFLYUT0018: Host default-host starting
+2023-10-15 23:19:01,592 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-5) WFLYUT0006: Undertow HTTP listener default listening on localhost/127.0.0.1:8080
+2023-10-15 23:19:01,659 INFO  [org.jboss.as.connector.subsystems.datasources] (MSC service thread 1-7) WFLYJCA0001: Bound data source [java:jboss/datasources/ExampleDS]
+2023-10-15 23:19:01,942 INFO  [org.jboss.ws.common.management] (MSC service thread 1-5) JBWS022052: Starting JBoss Web Services - Stack CXF Server 5.0.0.Final
+2023-10-15 23:19:02,142 INFO  [org.jboss.weld.deployer] (MSC service thread 1-1) WFLYWELD0003: Processing weld deployment EjbCalc.jar
+2023-10-15 23:19:02,189 INFO  [org.jboss.weld.deployer] (MSC service thread 1-5) WFLYWELD0003: Processing weld deployment Ejbpractice.jar
+2023-10-15 23:19:02,277 INFO  [org.hibernate.validator.internal.util.Version] (MSC service thread 1-1) HV000001: Hibernate Validator 5.1.3.Final
+2023-10-15 23:19:02,340 INFO  [org.jboss.as.ejb3.deployment.processors.EjbJndiBindingsDeploymentUnitProcessor] (MSC service thread 1-5) JNDI bindings for session bean named Calculation in deployment unit deployment "Ejbpractice.jar" are as follows:
+
+	java:global/Ejbpractice/Calculation!com.java.ejb.Calculation
+	java:app/Ejbpractice/Calculation!com.java.ejb.Calculation
+	java:module/Calculation!com.java.ejb.Calculation
+	java:global/Ejbpractice/Calculation!com.java.ejb.CalculationRemote
+	java:app/Ejbpractice/Calculation!com.java.ejb.CalculationRemote
+	java:module/Calculation!com.java.ejb.CalculationRemote
+	java:jboss/exported/Ejbpractice/Calculation!com.java.ejb.CalculationRemote
+
+2023-10-15 23:19:02,340 INFO  [org.jboss.as.ejb3.deployment.processors.EjbJndiBindingsDeploymentUnitProcessor] (MSC service thread 1-1) JNDI bindings for session bean named Calculation in deployment unit deployment "EjbCalc.jar" are as follows:
+
+	java:global/EjbCalc/Calculation!com.java.ejb.CalculationRemote
+	java:app/EjbCalc/Calculation!com.java.ejb.CalculationRemote
+	java:module/Calculation!com.java.ejb.CalculationRemote
+	java:jboss/exported/EjbCalc/Calculation!com.java.ejb.CalculationRemote
+	java:global/EjbCalc/Calculation
+	java:app/EjbCalc/Calculation
+	java:module/Calculation
+
+2023-10-15 23:19:02,446 INFO  [org.jboss.weld.deployer] (MSC service thread 1-1) WFLYWELD0006: Starting Services for CDI deployment: Ejbpractice.jar
+2023-10-15 23:19:02,446 INFO  [org.jboss.weld.deployer] (MSC service thread 1-5) WFLYWELD0006: Starting Services for CDI deployment: EjbCalc.jar
+2023-10-15 23:19:02,475 INFO  [org.jboss.weld.Version] (MSC service thread 1-5) WELD-000900: 2.2.16 (SP1)
+2023-10-15 23:19:02,490 INFO  [org.jboss.weld.deployer] (MSC service thread 1-8) WFLYWELD0009: Starting weld service for deployment EjbCalc.jar
+2023-10-15 23:19:02,491 INFO  [org.jboss.weld.deployer] (MSC service thread 1-5) WFLYWELD0009: Starting weld service for deployment Ejbpractice.jar
+2023-10-15 23:19:02,798 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-4) WFLYSRV0003: Could not index class module-info.class at /C:/Users/satyaprakashsh/wildfly-9.0.2.Final/standalone/deployments/JsfDemos.war/WEB-INF/lib/jackson-annotations-2.12.6.jar: java.lang.IllegalStateException: Unknown tag! pos=3 poolCount = 10
+	at org.jboss.jandex.Indexer.processConstantPool(Indexer.java:665)
+	at org.jboss.jandex.Indexer.index(Indexer.java:699)
+	at org.jboss.as.server.deployment.annotation.ResourceRootIndexer.indexResourceRoot(ResourceRootIndexer.java:99)
+	at org.jboss.as.server.deployment.annotation.AnnotationIndexProcessor.deploy(AnnotationIndexProcessor.java:51)
+	at org.jboss.as.server.deployment.DeploymentUnitPhaseService.start(DeploymentUnitPhaseService.java:156)
+	at org.jboss.msc.service.ServiceControllerImpl$StartTask.startService(ServiceControllerImpl.java:1948)
+	at org.jboss.msc.service.ServiceControllerImpl$StartTask.run(ServiceControllerImpl.java:1881)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+2023-10-15 23:19:02,814 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-4) WFLYSRV0003: Could not index class module-info.class at /C:/Users/satyaprakashsh/wildfly-9.0.2.Final/standalone/deployments/JsfDemos.war/WEB-INF/lib/jackson-core-2.12.6.jar: java.lang.IllegalStateException: Unknown tag! pos=3 poolCount = 34
+	at org.jboss.jandex.Indexer.processConstantPool(Indexer.java:665)
+	at org.jboss.jandex.Indexer.index(Indexer.java:699)
+	at org.jboss.as.server.deployment.annotation.ResourceRootIndexer.indexResourceRoot(ResourceRootIndexer.java:99)
+	at org.jboss.as.server.deployment.annotation.AnnotationIndexProcessor.deploy(AnnotationIndexProcessor.java:51)
+	at org.jboss.as.server.deployment.DeploymentUnitPhaseService.start(DeploymentUnitPhaseService.java:156)
+	at org.jboss.msc.service.ServiceControllerImpl$StartTask.startService(ServiceControllerImpl.java:1948)
+	at org.jboss.msc.service.ServiceControllerImpl$StartTask.run(ServiceControllerImpl.java:1881)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+2023-10-15 23:19:02,906 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-4) WFLYSRV0003: Could not index class module-info.class at /C:/Users/satyaprakashsh/wildfly-9.0.2.Final/standalone/deployments/JsfDemos.war/WEB-INF/lib/jackson-databind-2.12.6.1.jar: java.lang.IllegalStateException: Unknown tag! pos=3 poolCount = 66
+	at org.jboss.jandex.Indexer.processConstantPool(Indexer.java:665)
+	at org.jboss.jandex.Indexer.index(Indexer.java:699)
+	at org.jboss.as.server.deployment.annotation.ResourceRootIndexer.indexResourceRoot(ResourceRootIndexer.java:99)
+	at org.jboss.as.server.deployment.annotation.AnnotationIndexProcessor.deploy(AnnotationIndexProcessor.java:51)
+	at org.jboss.as.server.deployment.DeploymentUnitPhaseService.start(DeploymentUnitPhaseService.java:156)
+	at org.jboss.msc.service.ServiceControllerImpl$StartTask.startService(ServiceControllerImpl.java:1948)
+	at org.jboss.msc.service.ServiceControllerImpl$StartTask.run(ServiceControllerImpl.java:1881)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+2023-10-15 23:19:02,908 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-4) WFLYSRV0003: Could not index class module-info.class at /C:/Users/satyaprakashsh/wildfly-9.0.2.Final/standalone/deployments/JsfDemos.war/WEB-INF/lib/jakarta.annotation-api-2.1.1.jar: java.lang.IllegalStateException: Unknown tag! pos=4 poolCount = 17
+	at org.jboss.jandex.Indexer.processConstantPool(Indexer.java:665)
+	at org.jboss.jandex.Indexer.index(Indexer.java:699)
+	at org.jboss.as.server.deployment.annotation.ResourceRootIndexer.indexResourceRoot(ResourceRootIndexer.java:99)
+	at org.jboss.as.server.deployment.annotation.AnnotationIndexProcessor.deploy(AnnotationIndexProcessor.java:51)
+	at org.jboss.as.server.deployment.DeploymentUnitPhaseService.start(DeploymentUnitPhaseService.java:156)
+	at org.jboss.msc.service.ServiceControllerImpl$StartTask.startService(ServiceControllerImpl.java:1948)
+	at org.jboss.msc.service.ServiceControllerImpl$StartTask.run(ServiceControllerImpl.java:1881)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+2023-10-15 23:19:02,909 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-4) WFLYSRV0003: Could not index class module-info.class at /C:/Users/satyaprakashsh/wildfly-9.0.2.Final/standalone/deployments/JsfDemos.war/WEB-INF/lib/jakarta.inject-api-2.0.1.jar: java.lang.IllegalStateException: Unknown tag! pos=4 poolCount = 13
+	at org.jboss.jandex.Indexer.processConstantPool(Indexer.java:665)
+	at org.jboss.jandex.Indexer.index(Indexer.java:699)
+	at org.jboss.as.server.deployment.annotation.ResourceRootIndexer.indexResourceRoot(ResourceRootIndexer.java:99)
+	at org.jboss.as.server.deployment.annotation.AnnotationIndexProcessor.deploy(AnnotationIndexProcessor.java:51)
+	at org.jboss.as.server.deployment.DeploymentUnitPhaseService.start(DeploymentUnitPhaseService.java:156)
+	at org.jboss.msc.service.ServiceControllerImpl$StartTask.startService(ServiceControllerImpl.java:1948)
+	at org.jboss.msc.service.ServiceControllerImpl$StartTask.run(ServiceControllerImpl.java:1881)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+2023-10-15 23:19:02,909 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-4) WFLYSRV0003: Could not index class module-info.class at /C:/Users/satyaprakashsh/wildfly-9.0.2.Final/standalone/deployments/JsfDemos.war/WEB-INF/lib/jakarta.validation-api-3.0.2.jar: java.lang.IllegalStateException: Unknown tag! pos=4 poolCount = 34
+	at org.jboss.jandex.Indexer.processConstantPool(Indexer.java:665)
+	at org.jboss.jandex.Indexer.index(Indexer.java:699)
+	at org.jboss.as.server.deployment.annotation.ResourceRootIndexer.indexResourceRoot(ResourceRootIndexer.java:99)
+	at org.jboss.as.server.deployment.annotation.AnnotationIndexProcessor.deploy(AnnotationIndexProcessor.java:51)
+	at org.jboss.as.server.deployment.DeploymentUnitPhaseService.start(DeploymentUnitPhaseService.java:156)
+	at org.jboss.msc.service.ServiceControllerImpl$StartTask.startService(ServiceControllerImpl.java:1948)
+	at org.jboss.msc.service.ServiceControllerImpl$StartTask.run(ServiceControllerImpl.java:1881)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+2023-10-15 23:19:02,920 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-4) WFLYSRV0003: Could not index class module-info.class at /C:/Users/satyaprakashsh/wildfly-9.0.2.Final/standalone/deployments/JsfDemos.war/WEB-INF/lib/jakarta.ws.rs-api-3.1.0.jar: java.lang.IllegalStateException: Unknown tag! pos=4 poolCount = 38
+	at org.jboss.jandex.Indexer.processConstantPool(Indexer.java:665)
+	at org.jboss.jandex.Indexer.index(Indexer.java:699)
+	at org.jboss.as.server.deployment.annotation.ResourceRootIndexer.indexResourceRoot(ResourceRootIndexer.java:99)
+	at org.jboss.as.server.deployment.annotation.AnnotationIndexProcessor.deploy(AnnotationIndexProcessor.java:51)
+	at org.jboss.as.server.deployment.DeploymentUnitPhaseService.start(DeploymentUnitPhaseService.java:156)
+	at org.jboss.msc.service.ServiceControllerImpl$StartTask.startService(ServiceControllerImpl.java:1948)
+	at org.jboss.msc.service.ServiceControllerImpl$StartTask.run(ServiceControllerImpl.java:1881)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+2023-10-15 23:19:04,228 INFO  [org.jboss.weld.deployer] (MSC service thread 1-2) WFLYWELD0003: Processing weld deployment JsfDemos.war
+2023-10-15 23:19:04,390 INFO  [org.jboss.weld.deployer] (MSC service thread 1-4) WFLYWELD0006: Starting Services for CDI deployment: JsfDemos.war
+2023-10-15 23:19:04,421 INFO  [org.jboss.weld.deployer] (MSC service thread 1-8) WFLYWELD0009: Starting weld service for deployment JsfDemos.war
+2023-10-15 23:19:04,843 INFO  [javax.enterprise.resource.webcontainer.jsf.config] (ServerService Thread Pool -- 80) Initializing Mojarra 2.2.12-jbossorg-2 20150729-1131 for context '/JsfDemos'
+2023-10-15 23:19:06,578 INFO  [org.wildfly.extension.undertow] (ServerService Thread Pool -- 80) WFLYUT0021: Registered web context: /JsfDemos
+2023-10-15 23:19:06,602 INFO  [org.jboss.as.server] (ServerService Thread Pool -- 34) WFLYSRV0010: Deployed "JsfDemos.war" (runtime-name : "JsfDemos.war")
+2023-10-15 23:19:06,602 INFO  [org.jboss.as.server] (ServerService Thread Pool -- 34) WFLYSRV0010: Deployed "Ejbpractice.jar" (runtime-name : "Ejbpractice.jar")
+2023-10-15 23:19:06,602 INFO  [org.jboss.as.server] (ServerService Thread Pool -- 34) WFLYSRV0010: Deployed "EjbCalc.jar" (runtime-name : "EjbCalc.jar")
+2023-10-15 23:19:06,670 INFO  [org.jboss.as] (Controller Boot Thread) WFLYSRV0060: Http management interface listening on http://127.0.0.1:9990/management
+2023-10-15 23:19:06,670 INFO  [org.jboss.as] (Controller Boot Thread) WFLYSRV0051: Admin console listening on http://127.0.0.1:9990
+2023-10-15 23:19:06,671 INFO  [org.jboss.as] (Controller Boot Thread) WFLYSRV0025: WildFly Full 9.0.2.Final (WildFly Core 1.0.2.Final) started in 6898ms - Started 1122 of 1306 services (237 services are lazy, passive or on-demand)
+2023-10-15 23:26:47,857 INFO  [org.jboss.as.server.deployment.scanner] (DeploymentScanner-threads - 1) WFLYDS0004: Found EJBCalcPractice.jar in deployment directory. To trigger deployment create a file called EJBCalcPractice.jar.dodeploy
+2023-10-15 23:26:47,867 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-2) WFLYSRV0027: Starting deployment of "EJBCalcPractice.jar" (runtime-name: "EJBCalcPractice.jar")
+2023-10-15 23:26:47,879 INFO  [org.jboss.weld.deployer] (MSC service thread 1-8) WFLYWELD0003: Processing weld deployment EJBCalcPractice.jar
+2023-10-15 23:26:47,883 INFO  [org.jboss.as.ejb3.deployment.processors.EjbJndiBindingsDeploymentUnitProcessor] (MSC service thread 1-8) JNDI bindings for session bean named Calculation in deployment unit deployment "EJBCalcPractice.jar" are as follows:
+
+	java:global/EJBCalcPractice/Calculation!com.java.ejb.Calculation
+	java:app/EJBCalcPractice/Calculation!com.java.ejb.Calculation
+	java:module/Calculation!com.java.ejb.Calculation
+	java:global/EJBCalcPractice/Calculation!com.java.ejb.CalculationRemote
+	java:app/EJBCalcPractice/Calculation!com.java.ejb.CalculationRemote
+	java:module/Calculation!com.java.ejb.CalculationRemote
+	java:jboss/exported/EJBCalcPractice/Calculation!com.java.ejb.CalculationRemote
+
+2023-10-15 23:26:47,892 INFO  [org.jboss.weld.deployer] (MSC service thread 1-6) WFLYWELD0006: Starting Services for CDI deployment: EJBCalcPractice.jar
+2023-10-15 23:26:47,894 INFO  [org.jboss.weld.deployer] (MSC service thread 1-5) WFLYWELD0009: Starting weld service for deployment EJBCalcPractice.jar
+2023-10-15 23:26:47,975 INFO  [org.jboss.as.server] (DeploymentScanner-threads - 2) WFLYSRV0010: Deployed "EJBCalcPractice.jar" (runtime-name : "EJBCalcPractice.jar")
+2023-10-15 23:32:49,188 ERROR [org.jboss.remoting.remote.connection] (default I/O-1) JBREM000200: Remote connection failed: java.io.IOException: An existing connection was forcibly closed by the remote host
+2023-10-15 23:48:46,417 INFO  [org.jboss.as.server.deployment.scanner] (DeploymentScanner-threads - 1) WFLYDS0004: Found JsfDemoPractice.war in deployment directory. To trigger deployment create a file called JsfDemoPractice.war.dodeploy
+2023-10-15 23:48:46,423 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-4) WFLYSRV0027: Starting deployment of "JsfDemoPractice.war" (runtime-name: "JsfDemoPractice.war")
+2023-10-15 23:48:47,764 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-4) WFLYSRV0003: Could not index class module-info.class at /C:/Users/satyaprakashsh/wildfly-9.0.2.Final/standalone/deployments/JsfDemoPractice.war/WEB-INF/lib/jackson-annotations-2.12.6.jar: java.lang.IllegalStateException: Unknown tag! pos=3 poolCount = 10
+	at org.jboss.jandex.Indexer.processConstantPool(Indexer.java:665)
+	at org.jboss.jandex.Indexer.index(Indexer.java:699)
+	at org.jboss.as.server.deployment.annotation.ResourceRootIndexer.indexResourceRoot(ResourceRootIndexer.java:99)
+	at org.jboss.as.server.deployment.annotation.AnnotationIndexProcessor.deploy(AnnotationIndexProcessor.java:51)
+	at org.jboss.as.server.deployment.DeploymentUnitPhaseService.start(DeploymentUnitPhaseService.java:156)
+	at org.jboss.msc.service.ServiceControllerImpl$StartTask.startService(ServiceControllerImpl.java:1948)
+	at org.jboss.msc.service.ServiceControllerImpl$StartTask.run(ServiceControllerImpl.java:1881)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+2023-10-15 23:48:47,773 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-4) WFLYSRV0003: Could not index class module-info.class at /C:/Users/satyaprakashsh/wildfly-9.0.2.Final/standalone/deployments/JsfDemoPractice.war/WEB-INF/lib/jackson-core-2.12.6.jar: java.lang.IllegalStateException: Unknown tag! pos=3 poolCount = 34
+	at org.jboss.jandex.Indexer.processConstantPool(Indexer.java:665)
+	at org.jboss.jandex.Indexer.index(Indexer.java:699)
+	at org.jboss.as.server.deployment.annotation.ResourceRootIndexer.indexResourceRoot(ResourceRootIndexer.java:99)
+	at org.jboss.as.server.deployment.annotation.AnnotationIndexProcessor.deploy(AnnotationIndexProcessor.java:51)
+	at org.jboss.as.server.deployment.DeploymentUnitPhaseService.start(DeploymentUnitPhaseService.java:156)
+	at org.jboss.msc.service.ServiceControllerImpl$StartTask.startService(ServiceControllerImpl.java:1948)
+	at org.jboss.msc.service.ServiceControllerImpl$StartTask.run(ServiceControllerImpl.java:1881)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+2023-10-15 23:48:47,815 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-4) WFLYSRV0003: Could not index class module-info.class at /C:/Users/satyaprakashsh/wildfly-9.0.2.Final/standalone/deployments/JsfDemoPractice.war/WEB-INF/lib/jackson-databind-2.12.6.1.jar: java.lang.IllegalStateException: Unknown tag! pos=3 poolCount = 66
+	at org.jboss.jandex.Indexer.processConstantPool(Indexer.java:665)
+	at org.jboss.jandex.Indexer.index(Indexer.java:699)
+	at org.jboss.as.server.deployment.annotation.ResourceRootIndexer.indexResourceRoot(ResourceRootIndexer.java:99)
+	at org.jboss.as.server.deployment.annotation.AnnotationIndexProcessor.deploy(AnnotationIndexProcessor.java:51)
+	at org.jboss.as.server.deployment.DeploymentUnitPhaseService.start(DeploymentUnitPhaseService.java:156)
+	at org.jboss.msc.service.ServiceControllerImpl$StartTask.startService(ServiceControllerImpl.java:1948)
+	at org.jboss.msc.service.ServiceControllerImpl$StartTask.run(ServiceControllerImpl.java:1881)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+2023-10-15 23:48:47,816 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-4) WFLYSRV0003: Could not index class module-info.class at /C:/Users/satyaprakashsh/wildfly-9.0.2.Final/standalone/deployments/JsfDemoPractice.war/WEB-INF/lib/jakarta.annotation-api-2.1.1.jar: java.lang.IllegalStateException: Unknown tag! pos=4 poolCount = 17
+	at org.jboss.jandex.Indexer.processConstantPool(Indexer.java:665)
+	at org.jboss.jandex.Indexer.index(Indexer.java:699)
+	at org.jboss.as.server.deployment.annotation.ResourceRootIndexer.indexResourceRoot(ResourceRootIndexer.java:99)
+	at org.jboss.as.server.deployment.annotation.AnnotationIndexProcessor.deploy(AnnotationIndexProcessor.java:51)
+	at org.jboss.as.server.deployment.DeploymentUnitPhaseService.start(DeploymentUnitPhaseService.java:156)
+	at org.jboss.msc.service.ServiceControllerImpl$StartTask.startService(ServiceControllerImpl.java:1948)
+	at org.jboss.msc.service.ServiceControllerImpl$StartTask.run(ServiceControllerImpl.java:1881)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+2023-10-15 23:48:47,817 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-4) WFLYSRV0003: Could not index class module-info.class at /C:/Users/satyaprakashsh/wildfly-9.0.2.Final/standalone/deployments/JsfDemoPractice.war/WEB-INF/lib/jakarta.inject-api-2.0.1.jar: java.lang.IllegalStateException: Unknown tag! pos=4 poolCount = 13
+	at org.jboss.jandex.Indexer.processConstantPool(Indexer.java:665)
+	at org.jboss.jandex.Indexer.index(Indexer.java:699)
+	at org.jboss.as.server.deployment.annotation.ResourceRootIndexer.indexResourceRoot(ResourceRootIndexer.java:99)
+	at org.jboss.as.server.deployment.annotation.AnnotationIndexProcessor.deploy(AnnotationIndexProcessor.java:51)
+	at org.jboss.as.server.deployment.DeploymentUnitPhaseService.start(DeploymentUnitPhaseService.java:156)
+	at org.jboss.msc.service.ServiceControllerImpl$StartTask.startService(ServiceControllerImpl.java:1948)
+	at org.jboss.msc.service.ServiceControllerImpl$StartTask.run(ServiceControllerImpl.java:1881)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+2023-10-15 23:48:47,818 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-4) WFLYSRV0003: Could not index class module-info.class at /C:/Users/satyaprakashsh/wildfly-9.0.2.Final/standalone/deployments/JsfDemoPractice.war/WEB-INF/lib/jakarta.validation-api-3.0.2.jar: java.lang.IllegalStateException: Unknown tag! pos=4 poolCount = 34
+	at org.jboss.jandex.Indexer.processConstantPool(Indexer.java:665)
+	at org.jboss.jandex.Indexer.index(Indexer.java:699)
+	at org.jboss.as.server.deployment.annotation.ResourceRootIndexer.indexResourceRoot(ResourceRootIndexer.java:99)
+	at org.jboss.as.server.deployment.annotation.AnnotationIndexProcessor.deploy(AnnotationIndexProcessor.java:51)
+	at org.jboss.as.server.deployment.DeploymentUnitPhaseService.start(DeploymentUnitPhaseService.java:156)
+	at org.jboss.msc.service.ServiceControllerImpl$StartTask.startService(ServiceControllerImpl.java:1948)
+	at org.jboss.msc.service.ServiceControllerImpl$StartTask.run(ServiceControllerImpl.java:1881)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+2023-10-15 23:48:47,822 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-4) WFLYSRV0003: Could not index class module-info.class at /C:/Users/satyaprakashsh/wildfly-9.0.2.Final/standalone/deployments/JsfDemoPractice.war/WEB-INF/lib/jakarta.ws.rs-api-3.1.0.jar: java.lang.IllegalStateException: Unknown tag! pos=4 poolCount = 38
+	at org.jboss.jandex.Indexer.processConstantPool(Indexer.java:665)
+	at org.jboss.jandex.Indexer.index(Indexer.java:699)
+	at org.jboss.as.server.deployment.annotation.ResourceRootIndexer.indexResourceRoot(ResourceRootIndexer.java:99)
+	at org.jboss.as.server.deployment.annotation.AnnotationIndexProcessor.deploy(AnnotationIndexProcessor.java:51)
+	at org.jboss.as.server.deployment.DeploymentUnitPhaseService.start(DeploymentUnitPhaseService.java:156)
+	at org.jboss.msc.service.ServiceControllerImpl$StartTask.startService(ServiceControllerImpl.java:1948)
+	at org.jboss.msc.service.ServiceControllerImpl$StartTask.run(ServiceControllerImpl.java:1881)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+2023-10-15 23:48:48,577 WARN  [org.jboss.modules] (MSC service thread 1-4) Failed to define class org.glassfish.jersey.servlet.ServletContainer in Module "deployment.JsfDemoPractice.war:main" from Service Module Loader: java.lang.LinkageError: Failed to link org/glassfish/jersey/servlet/ServletContainer (Module "deployment.JsfDemoPractice.war:main" from Service Module Loader)
+	at org.jboss.modules.ModuleClassLoader.defineClass(ModuleClassLoader.java:437)
+	at org.jboss.modules.ModuleClassLoader.loadClassLocal(ModuleClassLoader.java:269)
+	at org.jboss.modules.ModuleClassLoader$1.loadClassLocal(ModuleClassLoader.java:77)
+	at org.jboss.modules.Module.loadModuleClass(Module.java:560)
+	at org.jboss.modules.ModuleClassLoader.findClass(ModuleClassLoader.java:197)
+	at org.jboss.modules.ConcurrentClassLoader.performLoadClassUnchecked(ConcurrentClassLoader.java:455)
+	at org.jboss.modules.ConcurrentClassLoader.performLoadClassChecked(ConcurrentClassLoader.java:404)
+	at org.jboss.modules.ConcurrentClassLoader.performLoadClass(ConcurrentClassLoader.java:385)
+	at org.jboss.modules.ConcurrentClassLoader.loadClass(ConcurrentClassLoader.java:130)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:348)
+	at org.jboss.as.server.deployment.reflect.DeploymentClassIndex.classIndex(DeploymentClassIndex.java:54)
+	at org.jboss.as.ee.component.deployers.InterceptorAnnotationProcessor.processComponentConfig(InterceptorAnnotationProcessor.java:85)
+	at org.jboss.as.ee.component.deployers.InterceptorAnnotationProcessor.deploy(InterceptorAnnotationProcessor.java:77)
+	at org.jboss.as.server.deployment.DeploymentUnitPhaseService.start(DeploymentUnitPhaseService.java:156)
+	at org.jboss.msc.service.ServiceControllerImpl$StartTask.startService(ServiceControllerImpl.java:1948)
+	at org.jboss.msc.service.ServiceControllerImpl$StartTask.run(ServiceControllerImpl.java:1881)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.NoClassDefFoundError: jakarta/servlet/Filter
+	at java.lang.ClassLoader.defineClass1(Native Method)
+	at java.lang.ClassLoader.defineClass(ClassLoader.java:763)
+	at org.jboss.modules.ModuleClassLoader.doDefineOrLoadClass(ModuleClassLoader.java:353)
+	at org.jboss.modules.ModuleClassLoader.defineClass(ModuleClassLoader.java:432)
+	... 19 more
+Caused by: java.lang.ClassNotFoundException: jakarta.servlet.Filter from [Module "deployment.JsfDemoPractice.war:main" from Service Module Loader]
+	at org.jboss.modules.ModuleClassLoader.findClass(ModuleClassLoader.java:205)
+	at org.jboss.modules.ConcurrentClassLoader.performLoadClassUnchecked(ConcurrentClassLoader.java:455)
+	at org.jboss.modules.ConcurrentClassLoader.performLoadClassChecked(ConcurrentClassLoader.java:404)
+	at org.jboss.modules.ConcurrentClassLoader.performLoadClass(ConcurrentClassLoader.java:385)
+	at org.jboss.modules.ConcurrentClassLoader.loadClass(ConcurrentClassLoader.java:130)
+	... 23 more
+
+2023-10-15 23:48:48,580 ERROR [org.jboss.msc.service.fail] (MSC service thread 1-4) MSC000001: Failed to start service jboss.deployment.unit."JsfDemoPractice.war".POST_MODULE: org.jboss.msc.service.StartException in service jboss.deployment.unit."JsfDemoPractice.war".POST_MODULE: WFLYSRV0153: Failed to process phase POST_MODULE of deployment "JsfDemoPractice.war"
+	at org.jboss.as.server.deployment.DeploymentUnitPhaseService.start(DeploymentUnitPhaseService.java:163)
+	at org.jboss.msc.service.ServiceControllerImpl$StartTask.startService(ServiceControllerImpl.java:1948)
+	at org.jboss.msc.service.ServiceControllerImpl$StartTask.run(ServiceControllerImpl.java:1881)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.LinkageError: Failed to link org/glassfish/jersey/servlet/ServletContainer (Module "deployment.JsfDemoPractice.war:main" from Service Module Loader)
+	at org.jboss.modules.ModuleClassLoader.defineClass(ModuleClassLoader.java:437)
+	at org.jboss.modules.ModuleClassLoader.loadClassLocal(ModuleClassLoader.java:269)
+	at org.jboss.modules.ModuleClassLoader$1.loadClassLocal(ModuleClassLoader.java:77)
+	at org.jboss.modules.Module.loadModuleClass(Module.java:560)
+	at org.jboss.modules.ModuleClassLoader.findClass(ModuleClassLoader.java:197)
+	at org.jboss.modules.ConcurrentClassLoader.performLoadClassUnchecked(ConcurrentClassLoader.java:455)
+	at org.jboss.modules.ConcurrentClassLoader.performLoadClassChecked(ConcurrentClassLoader.java:404)
+	at org.jboss.modules.ConcurrentClassLoader.performLoadClass(ConcurrentClassLoader.java:385)
+	at org.jboss.modules.ConcurrentClassLoader.loadClass(ConcurrentClassLoader.java:130)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:348)
+	at org.jboss.as.server.deployment.reflect.DeploymentClassIndex.classIndex(DeploymentClassIndex.java:54)
+	at org.jboss.as.ee.component.deployers.InterceptorAnnotationProcessor.processComponentConfig(InterceptorAnnotationProcessor.java:85)
+	at org.jboss.as.ee.component.deployers.InterceptorAnnotationProcessor.deploy(InterceptorAnnotationProcessor.java:77)
+	at org.jboss.as.server.deployment.DeploymentUnitPhaseService.start(DeploymentUnitPhaseService.java:156)
+	... 5 more
+Caused by: java.lang.NoClassDefFoundError: jakarta/servlet/Filter
+	at java.lang.ClassLoader.defineClass1(Native Method)
+	at java.lang.ClassLoader.defineClass(ClassLoader.java:763)
+	at org.jboss.modules.ModuleClassLoader.doDefineOrLoadClass(ModuleClassLoader.java:353)
+	at org.jboss.modules.ModuleClassLoader.defineClass(ModuleClassLoader.java:432)
+	... 19 more
+Caused by: java.lang.ClassNotFoundException: jakarta.servlet.Filter from [Module "deployment.JsfDemoPractice.war:main" from Service Module Loader]
+	at org.jboss.modules.ModuleClassLoader.findClass(ModuleClassLoader.java:205)
+	at org.jboss.modules.ConcurrentClassLoader.performLoadClassUnchecked(ConcurrentClassLoader.java:455)
+	at org.jboss.modules.ConcurrentClassLoader.performLoadClassChecked(ConcurrentClassLoader.java:404)
+	at org.jboss.modules.ConcurrentClassLoader.performLoadClass(ConcurrentClassLoader.java:385)
+	at org.jboss.modules.ConcurrentClassLoader.loadClass(ConcurrentClassLoader.java:130)
+	... 23 more
+
+2023-10-15 23:48:48,582 ERROR [org.jboss.as.controller.management-operation] (DeploymentScanner-threads - 2) WFLYCTL0013: Operation ("deploy") failed - address: ([("deployment" => "JsfDemoPractice.war")]) - failure description: {"WFLYCTL0080: Failed services" => {"jboss.deployment.unit.\"JsfDemoPractice.war\".POST_MODULE" => "org.jboss.msc.service.StartException in service jboss.deployment.unit.\"JsfDemoPractice.war\".POST_MODULE: WFLYSRV0153: Failed to process phase POST_MODULE of deployment \"JsfDemoPractice.war\"
+    Caused by: java.lang.LinkageError: Failed to link org/glassfish/jersey/servlet/ServletContainer (Module \"deployment.JsfDemoPractice.war:main\" from Service Module Loader)
+    Caused by: java.lang.NoClassDefFoundError: jakarta/servlet/Filter
+    Caused by: java.lang.ClassNotFoundException: jakarta.servlet.Filter from [Module \"deployment.JsfDemoPractice.war:main\" from Service Module Loader]"}}
+2023-10-15 23:48:48,594 INFO  [org.jboss.as.server] (DeploymentScanner-threads - 2) WFLYSRV0010: Deployed "JsfDemoPractice.war" (runtime-name : "JsfDemoPractice.war")
+2023-10-15 23:48:48,594 INFO  [org.jboss.as.controller] (DeploymentScanner-threads - 2) WFLYCTL0183: Service status report
+WFLYCTL0186:   Services which failed to start:      service jboss.deployment.unit."JsfDemoPractice.war".POST_MODULE: org.jboss.msc.service.StartException in service jboss.deployment.unit."JsfDemoPractice.war".POST_MODULE: WFLYSRV0153: Failed to process phase POST_MODULE of deployment "JsfDemoPractice.war"
+

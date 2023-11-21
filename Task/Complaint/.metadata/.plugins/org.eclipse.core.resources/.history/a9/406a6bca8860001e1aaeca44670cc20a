@@ -1,0 +1,25 @@
+package com.java.comp;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+
+public class ComplaintDAOImpl implements ComplaintDAO {
+	
+	Connection  connection;
+	PreparedStatement pst;
+
+	@Override
+	public String addComplain(Complaint comp) {
+		connection=ConnectionHelper.getConnection();
+		String cmd="Insert into Complaint(ComplaintID,ComplaintType,CDescription,ComplaintDate, Severity,Status) values(?,?,?,?,?,?)";
+		pst=connection.prepareStatement(cmd);
+		pst.setString(1, comp.getComplaintId());
+		pst.setString(2, comp.getComplaintType());
+		pst.setString(3, comp.getCDescription());
+		pst.setDate(4, comp.getComplaintDate());
+		
+		return"";
+		
+	}
+
+}

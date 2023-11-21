@@ -1,0 +1,5 @@
+import java.rmi.Remote;
+
+public interface Calc extends Remote {
+	int sum(int x,int y) throws RemoteException;
+}
