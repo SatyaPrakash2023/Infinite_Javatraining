@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<form method="get" action="CreateBankAccountServlet">
+		<center>
+			Account Number:
+			<input type="number" name="accountNumber"/><br/><br>
+			First Name:
+			<input type="text" name="firstName"/><br/><br>
+			Last Name:
+			<input type="text" name="lastName"/><br/><br>
+			City:
+			<input type="text" name="city"/><br/><br>
+			State:
+			<input type="text" name="State"/><br/><br>
+			Amount:
+			<input type="number" name="amount"/><br/><br>
+			CheqFacil:
+			<select name="ChecqFacil">
+				<option>YES</option><br/><br>
+				<option>NO</option><br/><br>
+			</select><br/><br/>
+			AccountType:
+			<select name="AccountType">
+				<option>FD</option>
+				<option>RD</option>
+				<option>Savings</option>
+			</select><br/><br/>
+			Status:
+			<select name="Status">
+				<option>Active</option><br/><br>
+				<option>InActive</option><br/><br>
+			</select><br/><br>
+			Date:
+			<input type="date" name="date"/><br/><br>
+			<input type="submit" value="Add Account"/>
+		</center>
+	</form>
+
+</body>
+</html>

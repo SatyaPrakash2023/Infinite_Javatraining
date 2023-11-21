@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<script>
+
+		function show(){
+
+			if(frmData.Satya.checked==true && frmData.Rahul.checked==true && frmData.Subhra.checked==true){
+
+				document.getElementById("result").innerHTML="Sweta is Present" +"<br>"+"Kajal is present"+"<br>"+"Swati is present";
+
+			}else if(frmData.sweta.checked==true && frmData.kajal.checked==false && frmData.swati.checked==true){
+
+				document.getElementById("result").innerHTML="Sweta is Present" +"<br>"+"Kajal is Absent"+"<br>"+"Swati is present";
+
+			}else if(frmData.sweta.checked==false && frmData.kajal.checked==true && frmData.swati.checked==true){
+
+				document.getElementById("result").innerHTML="Sweta is Absent" +"<br>"+"Kajal is Present"+"<br>"+"Swati is present";
+
+			}else if(frmData.sweta.checked==true && frmData.kajal.checked==false && frmData.swati.checked==false){
+
+				document.getElementById("result").innerHTML="Sweta is Present" +"<br>"+"Kajal is Absent"+"<br>"+"Swati is Absent";
+
+			}
+
+			else if(frmData.sweta.checked==true && frmData.kajal.checked==true && frmData.swati.checked==false){
+
+				document.getElementById("result").innerHTML="Sweta is Present" +"<br>"+"Kajal is present"+"<br>"+"Swati is Absent";
+
+			}else if(frmData.satya.checked==false && frmData.Rahul.checked==false && frmData.Subhra.checked==true){
+
+				document.getElementById("result").innerHTML="Satya is Absent" +"<br>"+"Rahul is Absent"+"<br>"+"Subhra is Present";
+
+			}
+
+			else{
+
+				document.getElementById("result").innerHTML="";	
+
+			}
+
+		}
+
+ 
+
+	</script>
+
+<meta charset="ISO-8859-1">
+
+<title>Insert title here</title>
+
+</head>
+
+<body>
+
+ 
+
+	<form name="frmData">
+
+		<center>
+
+			Satya
+
+			<input type="checkbox" name="Satya" onchange="show()" /><br/><br/>
+
+			Rahul
+
+			<input type="checkbox" name="Rahul" onchange="show()" /><br/><br/>
+
+			Subhra
+
+			<input type="checkbox" name="Subhra" onchange="show()" /><br/><br/>
+
+			<span id="result"></span>
+
+		</center>
+
+	</form>
+
+ 
+
+</body>
+
+</html>
