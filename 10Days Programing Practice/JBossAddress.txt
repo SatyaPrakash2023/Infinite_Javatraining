@@ -1,0 +1,5 @@
+C:\Users\satyaprakashsh\jboss-6.1.0.Final
+
+
+
+	EmployCrudBean/remote

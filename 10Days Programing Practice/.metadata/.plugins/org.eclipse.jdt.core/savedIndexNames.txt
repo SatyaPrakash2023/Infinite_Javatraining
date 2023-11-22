@@ -1,0 +1,4 @@
+INDEX VERSION 1.132+D:\10Days Programing Practice\.metadata\.plugins\org.eclipse.jdt.core
+1865797976.index
+2126244060.index
+2731534558.index

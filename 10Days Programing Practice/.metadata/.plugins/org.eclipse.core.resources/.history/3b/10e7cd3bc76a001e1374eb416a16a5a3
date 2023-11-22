@@ -1,0 +1,18 @@
+package com.java.day4;
+
+import java.util.Scanner;
+
+public class Exceptionhandaling4 {
+	
+	public static void main(String[] args) {
+		String str;
+		Scanner sc= new Scanner(System.in);
+		
+		try {
+			str=sc.nextInt();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+}
