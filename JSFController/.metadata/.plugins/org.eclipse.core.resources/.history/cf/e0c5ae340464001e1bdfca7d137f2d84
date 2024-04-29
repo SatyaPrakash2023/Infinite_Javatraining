@@ -1,0 +1,20 @@
+package com.java.jsf;
+
+import javax.faces.context.FacesContext;
+
+public class LoginController {
+	private Login login;
+
+	public Login getLogin() {
+		return login;
+	}
+
+	public void setLogin(Login login) {
+		this.login = login;
+	}
+	
+	public String validateLogin() {
+		FacesContext context=FacesContext.getCurrentInstance();
+		if(login.getuserName().)
+	}
+}

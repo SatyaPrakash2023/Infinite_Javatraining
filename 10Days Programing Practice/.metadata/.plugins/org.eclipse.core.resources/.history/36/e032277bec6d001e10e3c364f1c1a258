@@ -1,0 +1,27 @@
+package com.java.day3;
+
+
+import java.util.HashSet;
+import java.util.Iterator;
+
+public class HashSet1 {
+	public static void main(String[] args) {
+		
+		//Creating a hashset
+		HashSet<String> set=new HashSet<String>();  
+		//Adding element in hashset
+        set.add("Satya");  
+        set.add("Prakash");  
+        set.add("Arun");  
+        set.add("Sumit");  
+        System.out.println("An initial list of elements: "+set);
+        System.out.println(set.isEmpty());
+        System.out.println(set.size());
+        set.add("Subhra");
+        Iterator<String> i=set.iterator();  
+        while(i.hasNext())  
+        {  
+        	System.out.println(i.next());  
+        }  
+	}
+}

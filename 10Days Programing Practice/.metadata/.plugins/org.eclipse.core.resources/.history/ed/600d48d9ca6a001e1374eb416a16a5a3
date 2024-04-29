@@ -1,0 +1,22 @@
+package com.java.day4;
+class first{
+	void msg() {  
+	    System.out.println("parent method");  
+	  }    
+}    
+    
+class Second extends first{    
+  void msg()throws ArithmeticException {    
+    System.out.println("child method");    
+  } 
+
+public class Exceptionhandaling10 {
+	
+	    
+		  
+		  public static void main(String args[]) {    
+		   first p = new Second();    
+		   p.msg();    
+		  }    
+
+}
