@@ -1,0 +1,154 @@
+                                           						Git + Github {NOTES}
+
+commands--
+-------------------------
+1. to know the version of the git in your pc 
+     ->  (git --version)
+
+2. to makes a new directory.
+    -> (mkdir myProject)/or any name you want
+
+
+3. to change the current working directory
+     -> (cd myProject)
+
+4. Once you have navigated to the correct folder, you can initialize Git on that folder
+   -> (git init)
+
+5. list the files in our current working directory (But, first  add some files, or create a new file using your favourite text editor. 
+Then save or move it to the folder you just created.)
+  -> ( ls )
+6. check the Git status and see if it is a part of our repo
+ -> (git status)
+
+a. if you want to know the commit history then use 
+  -> (git log)
+
+      ab.) if you want to see the limited number of commits like 1 or 2 then use
+             -> (git log -p -1) for 1 commits to see
+             -> (git log -p -2) for 2 commits to see and so on..............
+
+b. if you want to know the changes of you current file to the staged file the you can use
+     -> (git diff)
+
+
+NOTE:: Now git is aware of the file, but has not added to repository.
+              . there are two states of files in the Git repo folder
+              1. Tracked- Git knows about this file and it is added to the repo.
+              2. Untracked- files which are in the working directory but not added to the repo.
+
+
+Git Staging Environment
+---------------------------------
+
+Q).what do you mean by Git Staging Environment ?
+    --As you are working,  you have to add, delete, remove and do some changes in the files but whenever you complete that work or hit the milestone of your work
+       or  finish a part of the work, you should add the file into staging enviornment.
+
+Q).what do you mean by Staged files?
+   -- Staged files are those files which are ready to be commited to the repo you are working on.
+
+7.we can add it to the Staging Environment with the help of the commmad.
+  -> (git add index.html/file name)
+
+NOTE:: You can also stage more than one file at a time.
+8. Using --all instead of individual filenames will stage all changes (new, modified, and deleted) files.
+  -> (git add --all) or (git add -A) or (git add .)
+
+Git Commit
+--------------------------------
+Since we have finished our work, so we have to move from stage to commit for our repo.
+
+Q). What do you mean by Commit?
+ -- Adding commit keeps the track of our progress and changes in our work. Git considers each commit change point or save point.
+    it is a point in our project, where you can go back if you find bug, or wants some changes .
+
+NOTE:: When we commit, we should always include a message.
+             -- By adding clear messages to each commit, it is easy for yourself (and others) to see what has changed and when.
+
+9. The commit command performs a commit, and the -m "message" adds a message.
+    -> git commit -m "Your Message"
+
+Git Commit without Stage
+---------------------------------------
+Sometimes, when you make small changes, using the staging environment seems like a waste of time. It is possible to commit changes directly, skipping the staging environment. The -a option will automatically stage every changed, already tracked file.
+
+Let's add a small update to index.html:
+
+Example
+<!DOCTYPE html>
+<html>
+<head>
+<title>Hello World!</title>
+<link rel="stylesheet" href="bluestyle.css">
+</head>
+<body>
+
+<h1>Hello world!</h1>
+<p>This is the first file in my new Git Repo.</p>
+<p>A new line in our file!</p>
+
+</body>
+</html>
+
+Example
+
+10. And check the status of our repository. But this time, we will use the (--short )option to see the changes in a more compact way:
+-> git status --short
+ M index.html
+
+NOTE:: Short status flags are:
+?? - Untracked files
+A - Files added to stage
+M - Modified files
+D - Deleted files
+
+11. We see the file we expected is modified. So let's commit it directly
+  ->  git commit -a - m "Your Message"
+
+Git Commit Log
+------------------------------
+12. To view the history of commits for a repository, you can use the log command
+-> git log
+
+Git Branch
+-------------------------------
+In Git, a branch is a new/separate version of the main repository.
+
+                     New Git Branch
+                     --------------------
+                      Let add some new features to our index.html page.
+
+                    13. We are working in our local repository, and we do not want to disturb or possibly wreck the main project,So we create a new branch:
+                       -> (git branch name of your branch)
+                                                  ^^^^^^^^^^^^^^^^^
+
+                     Now we created a new branch called "hello-world-images"
+
+                      14.Let's confirm that we have created a new branch:
+                      -> (git branch)
+
+                                 Example
+                                               git branch
+                                                hello-world-images
+                                               * master
+NOTE:: We can see the new branch with the name "hello-world-images", but the * beside master specifies that we are currently on that branch.
+
+15. for switching or moving from current branch to the another branch, we use
+-> (git checkout name of the branch you want to switch to)
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+NOTE:: Using the -b option on checkout will create a new branch, and move to it, if it does not exist
+
+NOTE:: if you dont want that your file or some sensetive file or some log file to not to shown to everyone then you can make (.gitignore ) file and inside that
+               you can add the name of that file which you want to hide.
+
+16. for making a new file directly from the git bash terminal for example you want to make an html  file called index.html so you can use
+      -> (touch <file name>)
+
+17. to delete a file from the text editor like index.html ,you can use 
+    -> (git rm <file name>) eg = (git rm index.html)
+     17.a. to delete index.html from the staging enviornment you can usse
+           (git rm --cached <file name>)
+
+
